@@ -15,6 +15,7 @@ public class SessionHelper {
     wd.findElement(By.name("USERNAME")).click();
     wd.findElement(By.name("USERNAME")).clear();
     wd.findElement(By.name("USERNAME")).sendKeys(username);
+    wd.findElement(By.name("PASSWORD")).click();
     wd.findElement(By.name("PASSWORD")).clear();
     wd.findElement(By.name("PASSWORD")).sendKeys(password);
     wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Hint:'])[3]/following::input[1]")).click();
