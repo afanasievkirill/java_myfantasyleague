@@ -1,4 +1,4 @@
-package ru.home.pft.myfantasyleague;
+package ru.home.pft.myfantasyleague.model;
 
 public class BasicInformationData {
   private final String franchisename;
