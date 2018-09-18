@@ -4,23 +4,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.home.pft.myfantasyleague.model.InformationData;
 
-public class FranchiseInformationHelper {
-  private FirefoxDriver wd;
+public class FranchiseInformationHelper extends HelperBase{
 
   public FranchiseInformationHelper(FirefoxDriver wd) {
-    this.wd = wd;
+    super(wd);
   }
 
   public void SubmitFranchiseInformation() {
-    wd.findElement(By.xpath("//input[@value='Save Franchise Information']")).click();
+    click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 
   public void FillFranchiseInformationForm(InformationData informationData) {
-    wd.findElement(By.name("FRANCHISE_NAME0043")).click();
-    wd.findElement(By.name("FRANCHISE_NAME0043")).clear();
-    wd.findElement(By.name("FRANCHISE_NAME0043")).sendKeys(informationData.getFranchisename());
-    wd.findElement(By.name("FRANCHISE_OWNER_NAME0043")).click();
-    wd.findElement(By.name("FRANCHISE_OWNER_NAME0043")).clear();
-    wd.findElement(By.name("FRANCHISE_OWNER_NAME0043")).sendKeys(informationData.getOwnername());
+    type(By.name("FRANCHISE_NAME0043"), informationData.getFranchisename());
+    type(By.name("FRANCHISE_OWNER_NAME0043"), informationData.getOwnername());
   }
+
 }
