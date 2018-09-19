@@ -4,9 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.home.pft.myfantasyleague.model.InformationData;
 
-public class FranchiseInformationHelper extends HelperBase{
+public class BaseInformationHelper extends HelperBase{
 
-  public FranchiseInformationHelper(FirefoxDriver wd) {
+  public BaseInformationHelper(FirefoxDriver wd) {
     super(wd);
   }
 

@@ -8,14 +8,14 @@ import java.util.concurrent.TimeUnit;
 public class ApplicationManager {
   FirefoxDriver wd;
   private NavigationHelper navigationHelper;
-  private FranchiseInformationHelper franchiseInformationHelper;
+  private BaseInformationHelper baseInformationHelper;
   private SessionHelper sessionHelper;
 
   public void init() {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://www62.myfantasyleague.com/2018/home/74575");
-    franchiseInformationHelper = new FranchiseInformationHelper(wd);
+    baseInformationHelper = new BaseInformationHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
     sessionHelper.login("Supirpuper", "Fr@nchise43");
@@ -27,8 +27,8 @@ public class ApplicationManager {
     wd.quit();
   }
 
-    public FranchiseInformationHelper getFranchiseInformationHelper() {
-    return franchiseInformationHelper;
+    public BaseInformationHelper getBaseInformationHelper() {
+    return baseInformationHelper;
   }
 
   public NavigationHelper getNavigationHelper() {
