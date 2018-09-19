@@ -9,15 +9,19 @@ public class NavigationHelper extends HelperBase {
     super(wd);
   }
 
-  public void GoToFranchiseInformation() {
+  public void goToFranchiseInformation() {
     click(By.linkText("franchise information"));
   }
 
-  public void GoToContactInformation() {
+  public void goToContactInformation() {
     click(By.linkText("contact information"));
   }
 
-  public void SubmitFranchiseInformation(){
+  public void goToCustomizeInformation() {
+    click(By.linkText("customize"));
+  }
+
+  public void submitFranchiseInformation(){
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 

@@ -7,8 +7,8 @@ public class BaseInformation extends TestBase {
 
   @Test
   public void testFranchiseBasicInformation() throws Exception {
-    app.getNavigationHelper().GoToFranchiseInformation();
-    app.getBaseInformationHelper().FillBaseInformationForm(new InformationData("Supir Mario Bros", "SupirPuper"));
-    app.getNavigationHelper().SubmitFranchiseInformation();
+    app.getNavigationHelper().goToFranchiseInformation();
+    app.getBaseInformationHelper().fillBaseInformationForm(new InformationData("Supir Mario Bros", "SupirPuper"));
+    app.getNavigationHelper().submitFranchiseInformation();
   }
 }
