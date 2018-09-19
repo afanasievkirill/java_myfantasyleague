@@ -10,6 +10,7 @@ public class ApplicationManager {
   private NavigationHelper navigationHelper;
   private BaseInformationHelper baseInformationHelper;
   private SessionHelper sessionHelper;
+  private ContactInformationHelper contactInformationHelper;
 
   public void init() {
     wd = new FirefoxDriver();
@@ -18,6 +19,7 @@ public class ApplicationManager {
     baseInformationHelper = new BaseInformationHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
+    contactInformationHelper = new ContactInformationHelper(wd);
     sessionHelper.login("Supirpuper", "Fr@nchise43");
   }
 
@@ -27,11 +29,15 @@ public class ApplicationManager {
     wd.quit();
   }
 
-    public BaseInformationHelper getBaseInformationHelper() {
+  public BaseInformationHelper getBaseInformationHelper() {
     return baseInformationHelper;
   }
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
+  }
+
+  public ContactInformationHelper getContactInformationHelper() {
+    return contactInformationHelper;
   }
 }

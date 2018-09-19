@@ -14,7 +14,7 @@ public class BaseInformationHelper extends HelperBase{
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 
-  public void FillFranchiseInformationForm(InformationData informationData) {
+  public void FillBaseInformationForm(InformationData informationData) {
     type(By.name("FRANCHISE_NAME0043"), informationData.getFranchisename());
     type(By.name("FRANCHISE_OWNER_NAME0043"), informationData.getOwnername());
   }

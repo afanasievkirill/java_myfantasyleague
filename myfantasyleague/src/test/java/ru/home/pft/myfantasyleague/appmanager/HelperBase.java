@@ -5,6 +5,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class HelperBase {
   protected FirefoxDriver wd;
+  private boolean acceptNextAlert = true;
+  private StringBuffer verificationErrors = new StringBuffer();
 
   public HelperBase(FirefoxDriver wd) {
     this.wd = wd;
@@ -19,4 +21,5 @@ public class HelperBase {
     wd.findElement(locator).clear();
     wd.findElement(locator).sendKeys(text);
   }
+
 }
