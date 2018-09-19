@@ -17,4 +17,8 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("contact information"));
   }
 
+  public void SubmitFranchiseInformation(){
+    click(By.xpath("//input[@value='Save Franchise Information']"));
+  }
+
 }

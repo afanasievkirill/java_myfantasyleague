@@ -11,6 +11,7 @@ public class ApplicationManager {
   private BaseInformationHelper baseInformationHelper;
   private SessionHelper sessionHelper;
   private ContactInformationHelper contactInformationHelper;
+  private CustomizeInformationHelper customizeInformationHelper;
 
   public void init() {
     wd = new FirefoxDriver();
@@ -20,6 +21,7 @@ public class ApplicationManager {
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
     contactInformationHelper = new ContactInformationHelper(wd);
+    customizeInformationHelper = new CustomizeInformationHelper(wd);
     sessionHelper.login("Supirpuper", "Fr@nchise43");
   }
 
@@ -39,5 +41,9 @@ public class ApplicationManager {
 
   public ContactInformationHelper getContactInformationHelper() {
     return contactInformationHelper;
+  }
+
+  public CustomizeInformationHelper getCustomizeInformationHelper() {
+    return customizeInformationHelper;
   }
 }
