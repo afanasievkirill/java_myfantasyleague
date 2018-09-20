@@ -2,6 +2,7 @@ package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.BrowserType;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,6 +15,7 @@ public class ApplicationManager {
   private CustomizeInformationHelper customizeInformationHelper;
 
   public void init() {
+    String browser = BrowserType.FIREFOX;
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     wd.get("http://www62.myfantasyleague.com/2018/home/74575");
