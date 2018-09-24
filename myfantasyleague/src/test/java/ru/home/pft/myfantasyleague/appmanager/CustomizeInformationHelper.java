@@ -1,13 +1,14 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.home.pft.myfantasyleague.model.CustomizeData;
 
 public class CustomizeInformationHelper extends HelperBase {
 
-  public CustomizeInformationHelper(FirefoxDriver wd) {
+  public CustomizeInformationHelper(WebDriver wd) {
     super(wd);
   }
 

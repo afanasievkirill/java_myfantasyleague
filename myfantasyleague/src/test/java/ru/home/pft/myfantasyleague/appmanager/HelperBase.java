@@ -1,14 +1,15 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.WebDriver;
+
 
 public class HelperBase {
-  protected FirefoxDriver wd;
+  protected WebDriver wd;
   private boolean acceptNextAlert = true;
   private StringBuffer verificationErrors = new StringBuffer();
 
-  public HelperBase(FirefoxDriver wd) {
+  public HelperBase(WebDriver wd) {
     this.wd = wd;
   }
 

@@ -1,12 +1,13 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.home.pft.myfantasyleague.model.ContactData;
 
 public class ContactInformationHelper extends HelperBase {
 
-  public ContactInformationHelper(FirefoxDriver wd) {
+  public ContactInformationHelper(WebDriver wd) {
     super(wd);
   }
 
