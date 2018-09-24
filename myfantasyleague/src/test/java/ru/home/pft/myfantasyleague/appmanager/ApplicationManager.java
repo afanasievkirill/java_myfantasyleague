@@ -32,7 +32,7 @@ public class ApplicationManager {
       wd = new InternetExplorerDriver();
     }
 
-    wd.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+    wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     wd.get("http://www62.myfantasyleague.com/2018/home/74575");
     baseInformationHelper = new BaseInformationHelper(wd);
     navigationHelper = new NavigationHelper(wd);
