@@ -26,4 +26,8 @@ public class NavigationHelper extends HelperBase {
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 
+  public void goToWaiver() {
+    wd.findElement(By.cssSelector("svg.icon-user-plus > path")).click();
+  }
+
 }

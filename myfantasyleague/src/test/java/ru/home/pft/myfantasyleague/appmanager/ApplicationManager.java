@@ -17,6 +17,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private ContactInformationHelper contactInformationHelper;
   private CustomizeInformationHelper customizeInformationHelper;
+  private WaiverHelper waiverHelper;
   private String browser;
 
   public ApplicationManager(String browser) {
@@ -62,5 +63,9 @@ public class ApplicationManager {
 
   public CustomizeInformationHelper getCustomizeInformationHelper() {
     return customizeInformationHelper;
+  }
+
+  public WaiverHelper getWaiverHelper() {
+    return waiverHelper;
   }
 }
