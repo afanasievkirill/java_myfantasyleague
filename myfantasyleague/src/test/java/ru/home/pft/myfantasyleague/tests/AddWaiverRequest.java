@@ -14,8 +14,10 @@ public class AddWaiverRequest extends TestBase {
   public void testAddPlayer() throws Exception {
     app.getNavigationHelper().goToWaiver();
     fillWaiverData("DAL", "TE", "//tr[@id='add_176']/td", "1", "Тест");
-    wd.findElement(By.id("add_drop_submit")).click();
+    app.getNavigationHelper().submitWaiverRequest();
   }
+
+
 
   private void fillWaiverData(String team, String position, String player, String bbid, String comment) {
     wd.findElement(By.id("add_filt_nfl")).click();
