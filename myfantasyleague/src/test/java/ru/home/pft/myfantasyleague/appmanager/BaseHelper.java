@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import ru.home.pft.myfantasyleague.model.InformationData;
 
 
-public class BaseInformationHelper extends HelperBase{
+public class BaseHelper extends HelperBase{
 
-  public BaseInformationHelper(WebDriver wd) {
+  public BaseHelper(WebDriver wd) {
     super(wd);
   }
 

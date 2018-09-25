@@ -13,10 +13,10 @@ public class ApplicationManager {
   WebDriver wd;
 
   private NavigationHelper navigationHelper;
-  private BaseInformationHelper baseInformationHelper;
+  private BaseHelper baseHelper;
   private SessionHelper sessionHelper;
-  private ContactInformationHelper contactInformationHelper;
-  private CustomizeInformationHelper customizeInformationHelper;
+  private ContactHelper contactHelper;
+  private CustomizeHelper customizeHelper;
   private WaiverHelper waiverHelper;
   private String browser;
 
@@ -35,11 +35,12 @@ public class ApplicationManager {
 
     wd.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     wd.get("http://www62.myfantasyleague.com/2018/home/74575");
-    baseInformationHelper = new BaseInformationHelper(wd);
+    baseHelper = new BaseHelper(wd);
     navigationHelper = new NavigationHelper(wd);
     sessionHelper = new SessionHelper(wd);
-    contactInformationHelper = new ContactInformationHelper(wd);
-    customizeInformationHelper = new CustomizeInformationHelper(wd);
+    contactHelper = new ContactHelper(wd);
+    customizeHelper = new CustomizeHelper(wd);
+    waiverHelper = new WaiverHelper(wd);
     sessionHelper.login("Supirpuper", "Fr@nchise43");
   }
 
@@ -49,20 +50,20 @@ public class ApplicationManager {
     wd.quit();
   }
 
-  public BaseInformationHelper getBaseInformationHelper() {
-    return baseInformationHelper;
+  public BaseHelper getBaseHelper() {
+    return baseHelper;
   }
 
   public NavigationHelper getNavigationHelper() {
     return navigationHelper;
   }
 
-  public ContactInformationHelper getContactInformationHelper() {
-    return contactInformationHelper;
+  public ContactHelper getContactHelper() {
+    return contactHelper;
   }
 
-  public CustomizeInformationHelper getCustomizeInformationHelper() {
-    return customizeInformationHelper;
+  public CustomizeHelper getCustomizeHelper() {
+    return customizeHelper;
   }
 
   public WaiverHelper getWaiverHelper() {

@@ -22,16 +22,12 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("customize"));
   }
 
-  public void submitFranchiseInformation(){
+  public void submitFranchiseInformation() {
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 
   public void goToWaiver() {
     wd.findElement(By.cssSelector("svg.icon-user-plus > path")).click();
-  }
-
-  public void submitWaiverRequest() {
-    wd.findElement(By.id("add_drop_submit")).click();
   }
 
 }

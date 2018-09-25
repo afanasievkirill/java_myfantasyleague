@@ -6,9 +6,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.home.pft.myfantasyleague.model.CustomizeData;
 
-public class CustomizeInformationHelper extends HelperBase {
+public class CustomizeHelper extends HelperBase {
 
-  public CustomizeInformationHelper(WebDriver wd) {
+  public CustomizeHelper(WebDriver wd) {
     super(wd);
   }
 

@@ -8,8 +8,8 @@ public class CustomizeInformation extends TestBase {
   @Test
   public void testCustomizeInformation() throws Exception{
     app.getNavigationHelper().goToCustomizeInformation();
-    app.getCustomizeInformationHelper().fillCustomizeInformation(new CustomizeData("SMB", "OneMileHigh", null));
-    app.getCustomizeInformationHelper().fillTimeZone("CT");
+    app.getCustomizeHelper().fillCustomizeInformation(new CustomizeData("SMB", "OneMileHigh", null));
+    app.getCustomizeHelper().fillTimeZone("CT");
     app.getNavigationHelper().submitFranchiseInformation();
   }
 

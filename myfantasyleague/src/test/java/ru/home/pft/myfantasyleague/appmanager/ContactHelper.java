@@ -5,9 +5,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.home.pft.myfantasyleague.model.ContactData;
 
-public class ContactInformationHelper extends HelperBase {
+public class ContactHelper extends HelperBase {
 
-  public ContactInformationHelper(WebDriver wd) {
+  public ContactHelper(WebDriver wd) {
     super(wd);
   }
 
