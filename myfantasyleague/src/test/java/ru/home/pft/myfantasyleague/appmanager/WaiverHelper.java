@@ -50,7 +50,7 @@ public class WaiverHelper extends HelperBase {
 
   public void selectTeam() {
     wd.findElement(By.id("add_filt_nfl")).click();
-    new Select(wd.findElement(By.id("add_filt_nfl"))).selectByVisibleText("DAL");
+    new Select(wd.findElement(By.xpath("//select[@id='add_filt_nfl']"))).selectByVisibleText("DAL");
     wd.findElement(By.id("add_filt_nfl")).click();
   }
 }

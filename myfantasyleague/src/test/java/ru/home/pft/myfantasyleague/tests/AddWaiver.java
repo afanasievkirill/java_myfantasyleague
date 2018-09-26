@@ -9,7 +9,7 @@ public class AddWaiver extends TestBase {
   public void testAddPlayer() throws Exception {
     app.getNavigationHelper().goToWaiver();
     app.getWaiverHelper().selectTeam();
-    app.getWaiverHelper().fillWaiverData(new WaiverData("//tr[@id='add_176']/td", "1", "Тест"));
+    app.getWaiverHelper().fillWaiverData(new WaiverData("//tr[@id='add_172']/td", "1", "Тест"));
     app.getWaiverHelper().submitWaiverRequest();
   }
 

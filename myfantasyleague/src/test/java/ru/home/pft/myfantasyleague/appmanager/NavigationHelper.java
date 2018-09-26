@@ -27,7 +27,7 @@ public class NavigationHelper extends HelperBase {
   }
 
   public void goToWaiver() {
-    wd.findElement(By.cssSelector("svg.icon-user-plus > path")).click();
+    click(By.linkText("Add/Drop Players"));
   }
 
 }
