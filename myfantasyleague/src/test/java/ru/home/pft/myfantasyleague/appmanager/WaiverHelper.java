@@ -2,6 +2,7 @@ package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import ru.home.pft.myfantasyleague.model.WaiverData;
 
 public class WaiverHelper extends HelperBase {
@@ -45,5 +46,11 @@ public class WaiverHelper extends HelperBase {
 
   public boolean isThereRequest() {
     return isElementPresent(By.linkText("Edit"));
+  }
+
+  public void selectTeam() {
+    wd.findElement(By.id("add_filt_nfl")).click();
+    new Select(wd.findElement(By.id("add_filt_nfl"))).selectByVisibleText("DAL");
+    wd.findElement(By.id("add_filt_nfl")).click();
   }
 }
