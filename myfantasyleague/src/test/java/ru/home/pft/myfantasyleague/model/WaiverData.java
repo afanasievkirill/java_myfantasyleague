@@ -11,6 +11,12 @@ public class WaiverData {
     this.comment = comment;
   }
 
+  public WaiverData(String player) {
+    this.player = player;
+    this.bbid = null;
+    this.comment = null;
+  }
+
   public String getPlayer() {
     return player;
   }

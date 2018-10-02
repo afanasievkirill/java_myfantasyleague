@@ -14,7 +14,12 @@ public class WaiverHelper extends HelperBase {
   public void fillWaiverData(WaiverData waiverData) {
     click(By.xpath(waiverData.getPlayer()));
     type(By.name("BBID_AMT"), waiverData.getBbid());
-    type(By.name("COMMENTS"), waiverData.getComment());
+    type(By.name("COMMENTS"), waiverData.getComment()); // метод добавляет запрос на добавление игрока в период вейвера
+  }
+
+  public void fillFreeAgentData(WaiverData waiverData){
+    click(By.xpath(waiverData.getPlayer()));
+    wd.findElement(By.id("add_drop_submit")).click(); //метод добавляет в состав игрока в период свободных агентов
   }
 
   public void deletePlayer() {
@@ -52,5 +57,9 @@ public class WaiverHelper extends HelperBase {
     wd.findElement(By.id("add_filt_nfl")).click();
     new Select(wd.findElement(By.xpath("//select[@id='add_filt_nfl']"))).selectByVisibleText("DAL");
     wd.findElement(By.id("add_filt_nfl")).click();
+  }
+
+  public boolean isTherWaiver(){
+    return isElementPresent(By.linkText("amount_0"));
   }
 }
