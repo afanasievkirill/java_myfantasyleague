@@ -47,7 +47,6 @@ public class WaiverHelper extends HelperBase {
     type(By.id("comment"), comment);
   }
 
-
   public void addRequest(WaiverData requestData) {
     fillWaiverData(requestData);
     submitWaiverRequest();
@@ -63,12 +62,8 @@ public class WaiverHelper extends HelperBase {
     wd.findElement(By.id("add_filt_nfl")).click();
   }
 
-  public boolean isTherWaiver() {
-    return isElementPresent(By.linkText("amount_0"));
-  }
-
   public void DpopPlayer(WaiverData waiverData) {
     click(By.xpath(waiverData.getPlayer()));
-
   }
+
 }

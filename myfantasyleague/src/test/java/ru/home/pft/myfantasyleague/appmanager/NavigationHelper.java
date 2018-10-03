@@ -30,4 +30,7 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("Add/Drop Players"));
   }
 
+  public void goToLineup() {
+    click(By.xpath("//a[contains(text(),'Submit Lineup')]"));
+  }
 }

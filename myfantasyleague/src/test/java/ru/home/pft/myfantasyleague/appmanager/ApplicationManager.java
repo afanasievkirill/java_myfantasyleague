@@ -16,6 +16,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private FranchiseHelper franchiseHelper;
   private WaiverHelper waiverHelper;
+  private LineupHelper lineupHelper;
   private String browser;
 
   public ApplicationManager(String browser) {
@@ -37,6 +38,7 @@ public class ApplicationManager {
     sessionHelper = new SessionHelper(wd);
     franchiseHelper = new FranchiseHelper(wd);
     waiverHelper = new WaiverHelper(wd);
+    lineupHelper = new LineupHelper(wd);
     sessionHelper.login("Supirpuper", "Fr@nchise43");
   }
 
@@ -56,5 +58,9 @@ public class ApplicationManager {
 
   public WaiverHelper getWaiverHelper() {
     return waiverHelper;
+  }
+
+  public LineupHelper getLineupHelper() {
+    return lineupHelper;
   }
 }
