@@ -14,7 +14,7 @@ public class FranchiseHelper extends HelperBase {
     super(wd);
   }
 
-  public void fillCustomizeInformation(CustomizeData customizeData) {
+  public void customize(CustomizeData customizeData) {
     type(By.name("FRANCHISE_ABBREV0043"), customizeData.getAbbriveation());
     type(By.name("FRANCHISE_STADIUM0043"), customizeData.getStadium() );
     type(By.id("NOTES0043"), customizeData.getNote());

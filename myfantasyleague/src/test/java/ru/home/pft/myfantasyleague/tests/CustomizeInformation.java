@@ -7,10 +7,22 @@ public class CustomizeInformation extends TestBase {
 
   @Test
   public void testCustomizeInformation() throws Exception{
-    app.goTo().goToCustomizeInformation();
-    app.franchise().fillCustomizeInformation(new CustomizeData("SMB", "OneMileHigh", null));
+    app.goTo().customize();
+    app.franchise().customize(new CustomizeData()
+            .withAbbriveation("SMB").withStadium("OneMileHigh").withNote(null));
     app.franchise().fillTimeZone("CT");
     app.goTo().submit();
+    app.goTo().home();
+  }
+
+  @Test
+  public void testCustomizeInformationTD() throws Exception{
+    app.goTo().customizeTD();
+    app.franchise().customize(new CustomizeData()
+            .withAbbriveation("SMB").withStadium("OneMileHigh").withNote(null));
+    app.franchise().fillTimeZone("CT");
+    app.goTo().submit();
+    app.goTo().home();
   }
 
 }

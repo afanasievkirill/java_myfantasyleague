@@ -1,21 +1,12 @@
 package ru.home.pft.myfantasyleague.model;
 
 public class ContactData {
-  private final String dayphone;
-  private final String homephone;
-  private final String street;
-  private final String city;
-  private final String zip;
-  private final String twitter;
-
-  public ContactData(String dayphone, String homephone, String street, String city, String zip, String twitter) {
-    this.dayphone = dayphone;
-    this.homephone = homephone;
-    this.street = street;
-    this.city = city;
-    this.zip = zip;
-    this.twitter = twitter;
-  }
+  private String dayphone;
+  private String homephone;
+  private String street;
+  private String city;
+  private String zip;
+  private String twitter;
 
   public String getDayphone() {
     return dayphone;
@@ -39,5 +30,35 @@ public class ContactData {
 
   public String getTwitter() {
     return twitter;
+  }
+
+  public ContactData withDayphone(String dayphone) {
+    this.dayphone = dayphone;
+    return this;
+  }
+
+  public ContactData withHomephone(String homephone) {
+    this.homephone = homephone;
+    return this;
+  }
+
+  public ContactData withStreet(String street) {
+    this.street = street;
+    return this;
+  }
+
+  public ContactData withCity(String city) {
+    this.city = city;
+    return this;
+  }
+
+  public ContactData withZip(String zip) {
+    this.zip = zip;
+    return this;
+  }
+
+  public ContactData withTwitter(String twitter) {
+    this.twitter = twitter;
+    return this;
   }
 }

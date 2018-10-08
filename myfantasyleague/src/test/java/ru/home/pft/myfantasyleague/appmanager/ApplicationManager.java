@@ -58,7 +58,7 @@ public class ApplicationManager {
     return franchiseHelper;
   }
 
-  public WaiverHelper getWaiverHelper() {
+  public WaiverHelper waiver() {
     return waiverHelper;
   }
 

@@ -18,12 +18,22 @@ public class NavigationHelper extends HelperBase {
     click(By.xpath("//a[contains(text(),'Franchise Setup')]"));
   }
 
-  public void goToContactInformation() {
+  public void Contact() {
     click(By.linkText("contact information"));
   }
 
-  public void goToCustomizeInformation() {
+  public void ContactTD(){
+    click(By.xpath("//a[contains(text(),'Franchise Setup')]"));
+    click(By.linkText("Contact Info"));
+  }
+
+  public void customize() {
     click(By.linkText("customize"));
+  }
+
+  public void customizeTD() {
+    click(By.xpath("//a[contains(text(),'Franchise Setup')]"));
+    click(By.linkText("Customize"));
   }
 
     public void goToWaiver() {
