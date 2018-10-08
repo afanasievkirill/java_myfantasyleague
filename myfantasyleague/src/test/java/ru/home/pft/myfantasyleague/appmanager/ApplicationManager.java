@@ -44,15 +44,17 @@ public class ApplicationManager {
 
   public void stop() {
     wd.findElement(By.xpath("//img[@title='Login']")).click();
+    //xpath("(//a[contains(text(),'Logout')])[2]")
+    //xpath("//img[@title='Login']") падает
     wd.findElement(By.linkText("Logout")).click();
     wd.quit();
   }
 
-  public NavigationHelper getNavigationHelper() {
+  public NavigationHelper goTo() {
     return navigationHelper;
   }
 
-  public FranchiseHelper getFranchiseHelper() {
+  public FranchiseHelper franchise() {
     return franchiseHelper;
   }
 

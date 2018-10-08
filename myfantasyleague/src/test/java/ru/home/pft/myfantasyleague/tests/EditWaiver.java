@@ -7,7 +7,7 @@ public class EditWaiver extends TestBase{
 
   @Test
   public void testAddPlayer() throws Exception {
-    app.getNavigationHelper().goToWaiver();
+    app.goTo().goToWaiver();
     if (!app.getWaiverHelper().isThereRequest()){
       app.getWaiverHelper().addRequest(new WaiverData("//tr[@id='add_176']/td", "1", "Редактирование"));
     }

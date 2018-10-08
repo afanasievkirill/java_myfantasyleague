@@ -10,11 +10,12 @@ public class SubmitLineup extends TestBase {
   @Test
   public void testSubmitLineup() throws Exception {
 
-    app.getNavigationHelper().goToLineup();
+    app.goTo().goToLineup();
     if(app.getLineupHelper().isThereDefoltSubmissionForm()) {
       app.getLineupHelper().goToDefaultSubmissionForm();
     }
     List<LineupData> before = app.getLineupHelper().getLineuplist();
+    List<LineupData> after = app.getLineupHelper().getProjectList();
 
   }
 }

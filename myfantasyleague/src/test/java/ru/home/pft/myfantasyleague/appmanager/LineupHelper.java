@@ -22,22 +22,29 @@ public class LineupHelper extends HelperBase {
     click(By.xpath("//input[@value='Use Default Submission Form']"));
   }
 
-  public List<LineupData> getLineuplist () {
+  public List<LineupData> getLineuplist() {
     List<LineupData> lineups = new ArrayList<LineupData>();
     List<WebElement> elements = wd.findElements(By.cssSelector("td.player"));
-    List<WebElement> projects = wd.findElements(By.cssSelector("td.points proj-pts"));
-    for (WebElement element : elements){
+
+    for (WebElement element : elements) {
       String player = element.getText();
       LineupData lineup = new LineupData(player, 0);
       lineups.add(lineup);
     }
-    for (WebElement project : projects){
+    return lineups;
+
+  }
+
+  public List<LineupData> getProjectList() {
+    List<LineupData> projectss = new ArrayList<LineupData>();
+    List<WebElement> projects = wd.findElements(By.cssSelector("td.points proj-pts"));
+    for (WebElement project : projects) {
       String pp = project.getText();
       int projectPoint = Integer.parseInt(pp);
       LineupData lineup = new LineupData(null, projectPoint);
-      lineups.add(lineup);
+      projectss.add(lineup);
     }
-    return lineups;
+    return projectss;
   }
 
   public void SelectPlayer(String player) {

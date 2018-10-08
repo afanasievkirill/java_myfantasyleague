@@ -38,8 +38,16 @@ public class FranchiseHelper extends HelperBase {
     click(By.id(locator));
   }
 
-  public void fillBaseInformationForm(InformationData informationData) {
+  public void fillForm(InformationData informationData) {
     type(By.name("FRANCHISE_NAME0043"), informationData.getFranchisename());
     type(By.name("FRANCHISE_OWNER_NAME0043"), informationData.getOwnername());
+  }
+
+
+  public InformationData infoFromeHomeForm(InformationData information) {
+    String franchisename = wd.findElement(By.xpath("//table[@id='roster']/caption/span[2]/a")).getText();
+    wd.findElement(By.xpath("//table[@id='roster']/caption/span/a")).click();
+    String ownername = wd.findElement(By.xpath("//table[@id='single_roster']/tbody/tr/td/div/table/caption/span/span")).getText();
+    return new InformationData().withFranchisename(franchisename).withOwnername(ownername);
   }
 }

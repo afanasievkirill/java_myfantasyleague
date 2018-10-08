@@ -7,10 +7,10 @@ public class CustomizeInformation extends TestBase {
 
   @Test
   public void testCustomizeInformation() throws Exception{
-    app.getNavigationHelper().goToCustomizeInformation();
-    app.getFranchiseHelper().fillCustomizeInformation(new CustomizeData("SMB", "OneMileHigh", null));
-    app.getFranchiseHelper().fillTimeZone("CT");
-    app.getNavigationHelper().submitFranchiseInformation();
+    app.goTo().goToCustomizeInformation();
+    app.franchise().fillCustomizeInformation(new CustomizeData("SMB", "OneMileHigh", null));
+    app.franchise().fillTimeZone("CT");
+    app.goTo().submit();
   }
 
 }

@@ -10,8 +10,12 @@ public class NavigationHelper extends HelperBase {
     super(wd);
   }
 
-  public void goToFranchiseInformation() {
+  public void information() {
     click(By.linkText("franchise information"));
+  }
+
+  public void informationTD() {
+    click(By.xpath("//a[contains(text(),'Franchise Setup')]"));
   }
 
   public void goToContactInformation() {
@@ -22,15 +26,21 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("customize"));
   }
 
-  public void submitFranchiseInformation() {
-    click(By.xpath("//input[@value='Save Franchise Information']"));
-  }
-
-  public void goToWaiver() {
+    public void goToWaiver() {
     click(By.linkText("Add/Drop Players"));
   }
 
   public void goToLineup() {
     click(By.xpath("//a[contains(text(),'Submit Lineup')]"));
   }
+
+  public void submit() {
+    click(By.xpath("//input[@value='Save Franchise Information']"));
+  }
+
+  public  void home(){
+    //click(By.linkText("League Home"));
+    click(By.cssSelector("span.leaguename--the"));
+  }
+
 }
