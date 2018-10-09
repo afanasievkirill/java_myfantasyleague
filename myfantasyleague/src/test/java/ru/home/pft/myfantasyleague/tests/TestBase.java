@@ -12,6 +12,8 @@ public class TestBase {
 
   protected final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
 
+  public String testPlayer = "//tr[@id='add_539']/td";
+
   @BeforeSuite(alwaysRun = true)
   public void setUp() throws Exception {
     app.init();
