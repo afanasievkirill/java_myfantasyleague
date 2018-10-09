@@ -8,7 +8,11 @@ import ru.home.pft.myfantasyleague.model.ContactData;
 import ru.home.pft.myfantasyleague.model.PlayerData;
 import ru.home.pft.myfantasyleague.model.Players;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 public class WaiverHelper extends HelperBase {
@@ -96,4 +100,18 @@ public class WaiverHelper extends HelperBase {
     return new Players(dropPlayers);
   }
 
+  public boolean itsWaiver() {
+    Calendar c = Calendar.getInstance();
+    int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
+    DateFormat dateFormat = new SimpleDateFormat("HH");
+    Date date = new Date();
+    int hour = Integer.parseInt(dateFormat.format(date));
+    if (dayOfWeek == 4 && hour >= 12 || dayOfWeek == 5 || dayOfWeek == 6 && hour <= 8) {
+      System.out.println("Не вэйвер");
+      return false;
+    }else {
+      System.out.println("Вейвер");
+      return true;
+    }
+  }
 }

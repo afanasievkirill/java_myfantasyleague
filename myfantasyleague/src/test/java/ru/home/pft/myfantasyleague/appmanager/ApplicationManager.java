@@ -43,10 +43,12 @@ public class ApplicationManager {
   }
 
   public void stop() {
-    wd.findElement(By.xpath("//img[@title='Login']")).click();
-    //xpath("(//a[contains(text(),'Logout')])[2]")
-    //xpath("//img[@title='Login']") падает
-    wd.findElement(By.linkText("Logout")).click();
+    /*wd.findElement(By.xpath("//img[@title='Login']")).click();
+    xpath("(//a[contains(text(),'Logout')])[2]")
+    xpath("//img[@title='Login']") падает
+    wd.findElement(By.linkText("Logout")).click();*/
+    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Logout'])[2]/preceding::a[1]")).click();
+    wd.findElement(By.cssSelector("#p50 > li > a.no-sub")).click();
     wd.quit();
   }
 
