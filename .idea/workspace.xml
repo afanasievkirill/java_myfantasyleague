@@ -35,6 +35,7 @@
           <entry key="project.open.time.41" value="2" />
           <entry key="project.open.time.42" value="3" />
           <entry key="project.open.time.43" value="1" />
+          <entry key="project.open.time.44" value="1" />
           <entry key="project.open.time.46" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.54" value="2" />
@@ -46,32 +47,32 @@
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.87" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="2" />
-          <entry key="java" value="108" />
+          <entry key="java" value="118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="108" />
+          <entry key="JAVA" value="118" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="10" />
           <entry key="gradle" value="3" />
-          <entry key="java" value="4989" />
+          <entry key="java" value="5179" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="3" />
-          <entry key="JAVA" value="4989" />
+          <entry key="JAVA" value="5179" />
           <entry key="PLAIN_TEXT" value="10" />
         </counts>
       </usages-collector>
@@ -80,54 +81,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/PlayerData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
-              <folding>
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#439#440#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
-                <element signature="e#467#468#0" expanded="true" />
-                <element signature="e#449#450#0" expanded="true" />
-                <element signature="e#478#479#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/LineupHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/AddWaiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="370">
+              <caret line="30" selection-start-line="30" selection-end-line="30" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/ApplicationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="401">
+              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1677#1678#0" expanded="true" />
+                <element signature="e#1710#1711#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,8 +110,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/WaiverHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="84" selection-start-line="84" selection-end-line="84" />
+            <state relative-caret-position="-201">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#1106#1107#0" expanded="true" />
+                <element signature="e#1144#1145#0" expanded="true" />
+                <element signature="e#1651#1652#0" expanded="true" />
+                <element signature="e#1705#1706#0" expanded="true" />
+                <element signature="e#1993#1994#0" expanded="true" />
+                <element signature="e#2044#2045#0" expanded="true" />
+                <element signature="e#2331#2332#0" expanded="true" />
+                <element signature="e#2404#2405#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,17 +129,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DropPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="323">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
@@ -163,8 +138,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DeleteWaiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            <state relative-caret-position="289">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -361,7 +336,7 @@
       <map>
         <entry key="$PROJECT_DIR$/myfantasyleague" value="4612519156168" />
         <entry key="$PROJECT_DIR$/myfantasyleague/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/myfantasyleague/build.gradle" value="1338878730" />
+        <entry key="$PROJECT_DIR$/myfantasyleague/build.gradle" value="4218759883" />
         <entry key="$PROJECT_DIR$/myfantasyleague/gradle/wrapper/gradle-wrapper.properties" value="2696189834" />
       </map>
     </option>
@@ -587,8 +562,8 @@
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DropPlayer.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DeleteWaiver.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/Players.java" />
-        <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/AddWaiver.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/WaiverHelper.java" />
+        <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/AddWaiver.java" />
       </list>
     </option>
   </component>
@@ -604,6 +579,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -668,14 +646,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Devel/java_myfantasyleague/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539016200670" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539093039477" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/myfantasyleague/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -818,41 +793,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 17h 11m 25s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 15h 49m 52s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 29m 01s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 15h 54m 50s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 30m 34s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 15h 55m 56s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 33m 19s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 01m 42s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 34m 50s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 03m 48s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 45m 15s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 05m 00s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 46m 30s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 07m 16s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 49m 54s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 37m 53s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 18h 51m 00s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 39m 53s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="AddWaiver_testAddPlayer - 2018.10.08 at 19h 15m 14s.xml">
+    <history-entry file="AddWaiver_testAddPlayer - 2018.10.09 at 16h 47m 19s.xml">
       <configuration name="AddWaiver.testAddPlayer" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23827292" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24093817" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -885,18 +861,6 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/WaiverHelper.java</url>
-          <line>82</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/SessionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -922,44 +886,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/SuiteRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="304" selection-start-line="304" selection-end-line="304" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/TestRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="593" selection-start-line="593" selection-end-line="593" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/TestMethodWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="130" selection-start-line="130" selection-end-line="130" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/InformationData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
           <caret line="42" column="16" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="16" />
-          <folding>
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#417#418#0" expanded="true" />
-            <element signature="e#885#886#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,18 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="59" column="25" selection-start-line="59" selection-start-column="25" selection-end-line="59" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/ApplicationManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="47" column="43" lean-forward="true" selection-start-line="47" selection-start-column="43" selection-end-line="47" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1802#1803#0" expanded="true" />
-            <element signature="e#1831#1832#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,13 +972,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/Invoker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="667" selection-start-line="667" selection-end-line="667" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/Players.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1077,30 +988,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DeleteWaiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DropPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/LineupHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
+        <state relative-caret-position="238">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1108,10 +998,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DropPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
-          <caret line="16" column="4" lean-forward="true" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="67" />
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1120,13 +1017,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/PlayerData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="32" column="3" lean-forward="true" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
+        <state relative-caret-position="398">
+          <caret line="32" column="3" selection-start-line="32" selection-start-column="3" selection-end-line="32" selection-end-column="3" />
           <folding>
+            <element signature="e#391#392#0" expanded="true" />
             <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
             <element signature="e#449#450#0" expanded="true" />
             <element signature="e#478#479#0" expanded="true" />
           </folding>
@@ -1135,15 +1030,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/WaiverHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="84" selection-start-line="84" selection-end-line="84" />
+        <state relative-caret-position="-201">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#1106#1107#0" expanded="true" />
+            <element signature="e#1144#1145#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1705#1706#0" expanded="true" />
+            <element signature="e#1993#1994#0" expanded="true" />
+            <element signature="e#2044#2045#0" expanded="true" />
+            <element signature="e#2331#2332#0" expanded="true" />
+            <element signature="e#2404#2405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/DeleteWaiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/ApplicationManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1677#1678#0" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/TestRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="593" selection-start-line="593" selection-end-line="593" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/TestMethodWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/SuiteRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="371" selection-start-line="371" selection-end-line="371" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/Invoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="1168" selection-start-line="1168" selection-end-line="1168" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.testng/testng/7.0.0-beta1/d5b414d1f7480fe069e01ccadce1756f6a56a114/testng-7.0.0-beta1-sources.jar!/org/testng/internal/MethodInvocationHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="130" selection-start-line="130" selection-end-line="130" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/AddWaiver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="370">
+          <caret line="30" selection-start-line="30" selection-end-line="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

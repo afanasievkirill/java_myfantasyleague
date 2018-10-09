@@ -19,6 +19,13 @@ public class WaiverHelper extends HelperBase {
 
   public void fillRequest(PlayerData playerData) {
     click(By.xpath(playerData.getPlayerID()));
+    type(By.name("BBID_AMT"), playerData.getBbid());
+    type(By.name("COMMENTS"), playerData.getComment());
+
+  }
+
+  public void fillRequestIf(PlayerData playerData) {
+    click(By.xpath(playerData.getPlayerID()));
     if (isElementPresent(By.linkText("BBID_AMT"))) {
       type(By.name("BBID_AMT"), playerData.getBbid());
     }
@@ -74,9 +81,13 @@ public class WaiverHelper extends HelperBase {
 
   private Players dropPlayers = null;
 
+  public int getPlayerCount() {
+    return wd.findElements(By.cssSelector("*[id^='drop_']")).size();
+  }
+
   public Players all() {
     dropPlayers = new Players();
-    List<WebElement> rows= wd.findElements(By.id("drop"));
+    List<WebElement> rows = wd.findElements(By.cssSelector("*[id^='drop_']"));
     for (WebElement row : rows) {
       List<WebElement> cells = row.findElements(By.tagName("td"));
       String player = cells.get(0).getText();
