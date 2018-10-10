@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class SubmitLineup extends TestBase {
 
   @BeforeMethod
-  public void ensurePreconditions() {
+  public void ensurePreconditions() throws InterruptedException {
     app.goTo().goToLineup();
     app.lineup().clean();
   }
@@ -16,5 +16,6 @@ public class SubmitLineup extends TestBase {
   public void testSubmitLineup() throws Exception {
     app.lineup().fiilLineup();
     app.lineup().submit();
+    app.goTo().home();
   }
 }

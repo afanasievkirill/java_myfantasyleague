@@ -1,9 +1,6 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -33,6 +30,22 @@ public class HelperBase {
       }
     }
   }
+
+  public String closeAlertAndGetItsText() {
+    try {
+      Alert alert = wd.switchTo().alert();
+      String alertText = alert.getText();
+      if (acceptNextAlert) {
+        alert.accept();
+      } else {
+        alert.dismiss();
+      }
+      return alertText;
+    } finally {
+      acceptNextAlert = true;
+    }
+  }
+
 
   public boolean isAlertPresent() {
     try {

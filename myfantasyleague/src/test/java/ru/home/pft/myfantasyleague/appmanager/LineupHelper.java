@@ -8,6 +8,8 @@ import ru.home.pft.myfantasyleague.model.LineupData;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 public class LineupHelper extends HelperBase {
 
   public LineupHelper(WebDriver wd) {
@@ -22,13 +24,19 @@ public class LineupHelper extends HelperBase {
     return isElementPresent(By.xpath("//input[@value='Use Custom Submission Form']"));
   }
 
-  public void clean(){
+  public void clean() throws InterruptedException {
     if(isThereCustomSubmissionForm()){
       click(By.xpath("//input[@value='Use Custom Submission Form']"));
     }
     click(By.xpath("(//span[@id='clear-starters']/i)[2]"));
+    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='bench'])[2]/following::i[1]")).click();
+    wd.findElement(By.id("submit-lineup-form")).click();
+    assertTrue(closeAlertAndGetItsText().matches("^You are now un-submitting \\(clearing out\\) all lineups displayed on this page\\.\nAre you sure that is what you want to do[\\s\\S]$"));
+    Thread.sleep(5000);
     click(By.xpath("//input[@value='Use Default Submission Form']"));
-    submit();
+    Thread.sleep(1000);
+    click(By.xpath("//a[contains(text(),'Go Back To Previous Page')]"));
+    Thread.sleep(1000);
   }
 
   public void goToDefaultSubmissionForm() {
