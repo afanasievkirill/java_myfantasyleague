@@ -5,6 +5,11 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class HelperBase {
   protected WebDriver wd;
   private boolean acceptNextAlert = true;
@@ -45,6 +50,17 @@ public class HelperBase {
     }catch (NoSuchElementException ex) {
       return false;
     }
+  }
+
+  public int getHour() {
+    DateFormat dateFormat = new SimpleDateFormat("HH");
+    Date date = new Date();
+    return Integer.parseInt(dateFormat.format(date));
+  }
+
+  public int getDayOfWeek() {
+    Calendar c = Calendar.getInstance();
+    return c.get(Calendar.DAY_OF_WEEK);
   }
 
 }

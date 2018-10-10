@@ -73,11 +73,11 @@ public class WaiverHelper extends HelperBase {
     click(By.xpath(playerData.getPlayerID()));
   }
 
-  private Players dropPlayers = null;
-
   public int getPlayerCount() {
     return wd.findElements(By.cssSelector("*[id^='drop_']")).size();
   }
+
+  private Players dropPlayers = null;
 
   public Players all() {
     dropPlayers = new Players();
@@ -91,17 +91,15 @@ public class WaiverHelper extends HelperBase {
   }
 
   public boolean itsWaiver() {
-    Calendar c = Calendar.getInstance();
-    int dayOfWeek = c.get(Calendar.DAY_OF_WEEK);
-    DateFormat dateFormat = new SimpleDateFormat("HH");
-    Date date = new Date();
-    int hour = Integer.parseInt(dateFormat.format(date));
+    int dayOfWeek = getDayOfWeek();
+    int hour = getHour();
     if (dayOfWeek == 4 && hour >= 12 || dayOfWeek == 5 || dayOfWeek == 6 && hour <= 8) {
       System.out.println("Не вэйвер");
       return false;
-    }else {
+    } else {
       System.out.println("Вейвер");
       return true;
     }
   }
+
 }
