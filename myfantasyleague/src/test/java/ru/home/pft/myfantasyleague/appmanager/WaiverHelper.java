@@ -59,9 +59,9 @@ public class WaiverHelper extends HelperBase {
     wd.findElement(By.name("SAVE")).click();
   }
 
-  public void editFillWaiver(String BBID, String comment) {
-    type(By.id("amount_0"), BBID);
-    type(By.id("comment"), comment);
+  public void editFillWaiver(PlayerData playerData) {
+    type(By.id("amount_0"), playerData.getBbid());
+    type(By.id("comment"), playerData.getComment());
   }
 
   public void addRequest(PlayerData requestData) {
