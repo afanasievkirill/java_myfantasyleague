@@ -18,6 +18,19 @@ public class LineupHelper extends HelperBase {
     return isElementPresent(By.xpath("//input[@value='Use Default Submission Form']"));
   }
 
+  public boolean isThereCustomSubmissionForm() {
+    return isElementPresent(By.xpath("//input[@value='Use Custom Submission Form']"));
+  }
+
+  public void clean(){
+    if(isThereCustomSubmissionForm()){
+      click(By.xpath("//input[@value='Use Custom Submission Form']"));
+    }
+    click(By.xpath("(//span[@id='clear-starters']/i)[2]"));
+    click(By.xpath("//input[@value='Use Default Submission Form']"));
+    submit();
+  }
+
   public void goToDefaultSubmissionForm() {
     click(By.xpath("//input[@value='Use Default Submission Form']"));
   }

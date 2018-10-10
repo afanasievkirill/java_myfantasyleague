@@ -7,11 +7,9 @@ import org.testng.annotations.Test;
 public class SubmitLineup extends TestBase {
 
   @BeforeMethod
-  public void ensurePreconditions(){
+  public void ensurePreconditions() {
     app.goTo().goToLineup();
-    if(app.lineup().isThereDefoltSubmissionForm()) {
-      app.lineup().goToDefaultSubmissionForm();
-    }
+    app.lineup().clean();
   }
 
   @Test
