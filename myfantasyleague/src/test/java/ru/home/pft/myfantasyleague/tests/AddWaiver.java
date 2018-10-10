@@ -10,14 +10,14 @@ public class AddWaiver extends TestBase {
 
   @BeforeMethod
   public void  ensurePreconditions(){
-    app.goTo().goToWaiver();
+    app.goTo().waiver();
     if (app.waiver().isThereRequest()){
       app.waiver().deletePlayer();
     }
   }
 
   @Test
-  public void testAddPlayer() throws Exception {
+  public void testAddRequest() throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
       //Players before1 = app.waiver().all();
@@ -30,13 +30,52 @@ public class AddWaiver extends TestBase {
   }
 
   @Test
-  public void testAddPlayerMBB() throws Exception {
+  public void testAddRequestMBB() throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      //Players before1 = app.waiver().all();
       app.waiver().fillRequest(new PlayerData().
               withPlayerID(testPlayer).withBbid("1000").withComment("Тест"));
       app.waiver().submit();
+      app.goTo().backWaiver();
+      int after = app.waiver().getPlayerCount();
+      Assert.assertEquals(after, before);
+    }
+  }
+
+  @Test
+  public void testAddRequestRevBB() throws Exception {
+    if(app.waiver().itsWaiver()) {
+      int before = app.waiver().getPlayerCount();
+      app.waiver().fillRequest(new PlayerData().
+              withPlayerID(testPlayer).withBbid("-1000").withComment("Тест"));
+      app.waiver().submit();
+      app.goTo().backWaiver();
+      int after = app.waiver().getPlayerCount();
+      Assert.assertEquals(after, before);
+    }
+  }
+
+  @Test
+  public void testAddRequestFrBB() throws Exception {
+    if(app.waiver().itsWaiver()) {
+      int before = app.waiver().getPlayerCount();
+      app.waiver().fillRequest(new PlayerData().
+              withPlayerID(testPlayer).withBbid("1.5").withComment("Тест"));
+      app.waiver().submit();
+      app.goTo().backWaiver();
+      int after = app.waiver().getPlayerCount();
+      Assert.assertEquals(after, before);
+    }
+  }
+
+  @Test
+  public void testAddRequestCansel() throws Exception {
+    if(app.waiver().itsWaiver()) {
+      int before = app.waiver().getPlayerCount();
+      app.waiver().fillRequest(new PlayerData().
+              withPlayerID(testPlayer).withBbid("1").withComment("Тест"));
+      app.goTo().back();
+      app.goTo().waiver();
       int after = app.waiver().getPlayerCount();
       Assert.assertEquals(after, before);
     }

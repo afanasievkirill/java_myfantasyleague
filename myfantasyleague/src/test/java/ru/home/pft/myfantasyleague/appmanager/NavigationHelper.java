@@ -22,7 +22,7 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("contact information"));
   }
 
-  public void ContactTD(){
+  public void contactTD() {
     click(By.xpath("//a[contains(text(),'Franchise Setup')]"));
     click(By.linkText("Contact Info"));
   }
@@ -36,8 +36,12 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("Customize"));
   }
 
-    public void goToWaiver() {
+  public void waiver() {
     click(By.linkText("Add/Drop Players"));
+  }
+
+  public void backWaiver() {
+    wd.findElement(By.linkText("Go Back To Previous Page")).click();
   }
 
   public void goToLineup() {
@@ -48,9 +52,12 @@ public class NavigationHelper extends HelperBase {
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 
-  public  void home(){
+  public void home() {
     //click(By.linkText("League Home"));
     click(By.cssSelector("span.leaguename--the"));
   }
 
+  public void back() {
+    wd.navigate().back();
+  }
 }

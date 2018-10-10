@@ -47,7 +47,7 @@ public class LineupHelper extends HelperBase {
     return projectss;
   }
 
-  public void SelectPlayer(String player) {
+  public void selectPlayer(String player) {
     wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=" + player + "])[1]/preceding::input[1]")).click();
   }
 }

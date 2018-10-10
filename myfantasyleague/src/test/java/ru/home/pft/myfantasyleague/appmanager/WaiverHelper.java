@@ -79,7 +79,7 @@ public class WaiverHelper extends HelperBase {
     wd.findElement(By.id("add_filt_nfl")).click();
   }
 
-  public void DpopPlayer(PlayerData playerData) {
+  public void dpopPlayer(PlayerData playerData) {
     click(By.xpath(playerData.getPlayerID()));
   }
 
