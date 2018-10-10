@@ -2,9 +2,9 @@ package ru.home.pft.myfantasyleague.model;
 
 public class LineupData {
   private  String player;
-  private int projectPoint;
+  private double projectPoint;
 
-  public LineupData(String player, int projectPoint) {
+  public LineupData(String player, double projectPoint) {
     this.player = player;
     this.projectPoint = projectPoint;
   }
@@ -13,7 +13,7 @@ public class LineupData {
     return player;
   }
 
-  public int getProjectPoint() {
+  public double getProjectPoint() {
     return projectPoint;
   }
 }

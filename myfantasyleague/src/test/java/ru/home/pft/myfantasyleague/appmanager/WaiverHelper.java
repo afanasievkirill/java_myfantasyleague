@@ -28,16 +28,6 @@ public class WaiverHelper extends HelperBase {
 
   }
 
-  public void fillRequestIf(PlayerData playerData) {
-    click(By.xpath(playerData.getPlayerID()));
-    if (isElementPresent(By.linkText("BBID_AMT"))) {
-      type(By.name("BBID_AMT"), playerData.getBbid());
-    }
-    if (isElementPresent(By.linkText("COMMENTS"))) {
-      type(By.name("COMMENTS"), playerData.getComment());
-    }
-  }
-
   public void fillFreeAgentData(PlayerData playerData) {
     click(By.xpath(playerData.getPlayerID()));
     wd.findElement(By.id("add_drop_submit")).click(); //метод добавляет в состав игрока в период свободных агентов

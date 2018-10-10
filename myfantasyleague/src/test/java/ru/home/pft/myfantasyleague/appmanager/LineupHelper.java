@@ -22,6 +22,10 @@ public class LineupHelper extends HelperBase {
     click(By.xpath("//input[@value='Use Default Submission Form']"));
   }
 
+  public void submit(){
+    click(By.id("submit-lineup-form"));
+  }
+
   public List<LineupData> getLineuplist() {
     List<LineupData> lineups = new ArrayList<LineupData>();
     List<WebElement> elements = wd.findElements(By.cssSelector("td.player"));
@@ -32,7 +36,6 @@ public class LineupHelper extends HelperBase {
       lineups.add(lineup);
     }
     return lineups;
-
   }
 
   public List<LineupData> getProjectList() {
@@ -49,5 +52,16 @@ public class LineupHelper extends HelperBase {
 
   public void selectPlayer(String player) {
     wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=" + player + "])[1]/preceding::input[1]")).click();
+  }
+
+  public void fiilLineup() {
+    wd.findElement(By.xpath("(//input[@name='QB0043'])[3]")).click();
+    wd.findElement(By.xpath("(//input[@name='RB0043'])[2]")).click();
+    wd.findElement(By.xpath("(//input[@name='RB0043'])[3]")).click();
+    wd.findElement(By.xpath("(//input[@name='RB0043'])[4]")).click();
+    wd.findElement(By.xpath("(//input[@name='WR0043'])[1]")).click();
+    wd.findElement(By.xpath("(//input[@name='WR0043'])[2]")).click();
+    wd.findElement(By.xpath("(//input[@name='WR0043'])[3]")).click();
+    wd.findElement(By.xpath("(//input[@name='TE0043'])[3]")).click();
   }
 }

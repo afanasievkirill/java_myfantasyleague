@@ -1,21 +1,22 @@
 package ru.home.pft.myfantasyleague.tests;
 
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import ru.home.pft.myfantasyleague.model.LineupData;
 
-import java.util.List;
 
 public class SubmitLineup extends TestBase {
 
+  @BeforeMethod
+  public void ensurePreconditions(){
+    app.goTo().goToLineup();
+    if(app.lineup().isThereDefoltSubmissionForm()) {
+      app.lineup().goToDefaultSubmissionForm();
+    }
+  }
+
   @Test
   public void testSubmitLineup() throws Exception {
-
-    app.goTo().goToLineup();
-    if(app.getLineupHelper().isThereDefoltSubmissionForm()) {
-      app.getLineupHelper().goToDefaultSubmissionForm();
-    }
-    List<LineupData> before = app.getLineupHelper().getLineuplist();
-    List<LineupData> after = app.getLineupHelper().getProjectList();
-
+    app.lineup().fiilLineup();
+    app.lineup().submit();
   }
 }

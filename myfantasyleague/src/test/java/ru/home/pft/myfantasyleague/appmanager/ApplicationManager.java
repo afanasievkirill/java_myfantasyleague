@@ -64,7 +64,7 @@ public class ApplicationManager {
     return waiverHelper;
   }
 
-  public LineupHelper getLineupHelper() {
+  public LineupHelper lineup() {
     return lineupHelper;
   }
 }
