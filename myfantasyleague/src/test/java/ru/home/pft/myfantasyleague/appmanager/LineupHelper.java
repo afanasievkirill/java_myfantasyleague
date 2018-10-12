@@ -29,9 +29,10 @@ public class LineupHelper extends HelperBase {
       click(By.xpath("//input[@value='Use Custom Submission Form']"));
     }
     click(By.xpath("(//span[@id='clear-starters']/i)[2]"));
-    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='bench'])[2]/following::i[1]")).click();
-    wd.findElement(By.id("submit-lineup-form")).click();
-    assertTrue(closeAlertAndGetItsText().matches("^You are now un-submitting \\(clearing out\\) all lineups displayed on this page\\.\nAre you sure that is what you want to do[\\s\\S]$"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='bench'])[2]/following::i[1]"));
+    click(By.id("submit-lineup-form"));
+    assertTrue(closeAlertAndGetItsText()
+            .matches("^You are now un-submitting \\(clearing out\\) all lineups displayed on this page\\.\nAre you sure that is what you want to do[\\s\\S]$"));
     Thread.sleep(5000);
     click(By.xpath("//input[@value='Use Default Submission Form']"));
     Thread.sleep(1000);
@@ -50,10 +51,9 @@ public class LineupHelper extends HelperBase {
   public List<LineupData> getLineuplist() {
     List<LineupData> lineups = new ArrayList<LineupData>();
     List<WebElement> elements = wd.findElements(By.cssSelector("td.player"));
-
     for (WebElement element : elements) {
       String player = element.getText();
-      LineupData lineup = new LineupData(player, 0);
+      LineupData lineup = new LineupData().withPlayer(player);
       lineups.add(lineup);
     }
     return lineups;
@@ -65,24 +65,25 @@ public class LineupHelper extends HelperBase {
     for (WebElement project : projects) {
       String pp = project.getText();
       int projectPoint = Integer.parseInt(pp);
-      LineupData lineup = new LineupData(null, projectPoint);
+      LineupData lineup = new LineupData().withProjectPoint(projectPoint);
       projectss.add(lineup);
     }
     return projectss;
   }
 
   public void selectPlayer(String player) {
-    wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=" + player + "])[1]/preceding::input[1]")).click();
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)=" + player + "])[1]/preceding::input[1]"));
   }
 
-  public void fiilLineup() {
-    wd.findElement(By.xpath("(//input[@name='QB0043'])[3]")).click();
-    wd.findElement(By.xpath("(//input[@name='RB0043'])[2]")).click();
-    wd.findElement(By.xpath("(//input[@name='RB0043'])[3]")).click();
-    wd.findElement(By.xpath("(//input[@name='RB0043'])[4]")).click();
-    wd.findElement(By.xpath("(//input[@name='WR0043'])[1]")).click();
-    wd.findElement(By.xpath("(//input[@name='WR0043'])[2]")).click();
-    wd.findElement(By.xpath("(//input[@name='WR0043'])[3]")).click();
-    wd.findElement(By.xpath("(//input[@name='TE0043'])[3]")).click();
+  public void fiilLineup(LineupData lineup) {
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getQb()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getRb1()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getRb2()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getWr1()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getWr2()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getWr3()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getTe()+"'])[1]/preceding::input[1]"));
+    click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getSflex()+"'])[1]/preceding::input[1]"));
+
   }
 }
