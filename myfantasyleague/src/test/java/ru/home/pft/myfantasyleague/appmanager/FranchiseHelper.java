@@ -16,8 +16,12 @@ public class FranchiseHelper extends HelperBase {
 
   public void customize(CustomizeData customizeData) {
     type(By.name("FRANCHISE_ABBREV0043"), customizeData.getAbbriveation());
-    type(By.name("FRANCHISE_STADIUM0043"), customizeData.getStadium() );
+    type(By.name("FRANCHISE_STADIUM0043"), customizeData.getStadium());
     type(By.id("NOTES0043"), customizeData.getNote());
+    attach(By.name("FRANCHISE_ICON_FILE0043"), customizeData.getFranchiseIcon());
+    click(By.name("TIME_ZONE0043"));
+    new Select(wd.findElement(By.name("TIME_ZONE0043"))).selectByVisibleText(customizeData.getTimezone());
+    submit();
   }
 
   public void fillTimeZone(String timezone) {
@@ -49,5 +53,17 @@ public class FranchiseHelper extends HelperBase {
     wd.findElement(By.xpath("//table[@id='roster']/caption/span/a")).click();
     String ownername = wd.findElement(By.xpath("//table[@id='single_roster']/tbody/tr/td/div/table/caption/span/span")).getText();
     return new InformationData().withFranchisename(franchisename).withOwnername(ownername);
+  }
+
+  public CustomizeData infoFromeFranchiseHomeForm(CustomizeData customize) {
+    click(By.linkText("Franchise Home"));
+    String stadium = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Stadium:'])[1]/following::td[1]")).getText();
+    String note = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Other Franchise Notes:'])[1]/following::td[1]")).getText();
+
+    return new CustomizeData().withStadium(stadium).withNote(note);
+  }
+
+  public void submit() {
+    click(By.xpath("//input[@value='Save Franchise Information']"));
   }
 }

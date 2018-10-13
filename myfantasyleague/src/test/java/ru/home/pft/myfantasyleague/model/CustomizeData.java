@@ -7,6 +7,7 @@ public class CustomizeData {
   private String abbriveation;
   private String stadium;
   private String note;
+  private String timezone;
   private File franchiseIcon;
   private File franchiseLogo;
 
@@ -22,6 +23,11 @@ public class CustomizeData {
 
   public CustomizeData withNote(String note) {
     this.note = note;
+    return this;
+  }
+
+  public CustomizeData withTimezone(String timezone) {
+    this.timezone = timezone;
     return this;
   }
 
@@ -47,6 +53,11 @@ public class CustomizeData {
     return note;
   }
 
+  public String getTimezone() {
+    return timezone;
+  }
+
+
   public File getFranchiseIcon(){
     return franchiseIcon;
   }
@@ -69,13 +80,12 @@ public class CustomizeData {
     if (this == o) return true;
     if (o == null || getClass() != o.getClass()) return false;
     CustomizeData that = (CustomizeData) o;
-    return Objects.equals(abbriveation, that.abbriveation) &&
-            Objects.equals(stadium, that.stadium) &&
+    return Objects.equals(stadium, that.stadium) &&
             Objects.equals(note, that.note);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(abbriveation, stadium, note);
+    return Objects.hash(stadium, note);
   }
 }
