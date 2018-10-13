@@ -27,10 +27,13 @@ public class CustomizeInformation extends TestBase {
     assertThat(customize, equalTo(customiseFromFranchiseHome));
   }
 
-  @Test (enabled = false)
+  @Test
   public void testBadCustomizeInformation() throws Exception{
-    app.franchise().customize(new CustomizeData()
-            .withAbbriveation("SMB '").withStadium("OneMileHigh '").withNote("Негативный тест '").withTimezone("CT"));
+    CustomizeData customize = new CustomizeData()
+            .withAbbriveation("SMB '").withStadium("OneMileHigh '").withNote("Негативный тест '").withTimezone("CT");
+    app.franchise().customize(customize);
+    CustomizeData customiseFromFranchiseHome = app.franchise().infoFromeFranchiseHomeForm(customize);
+    assertThat(customize, equalTo(customiseFromFranchiseHome));
    }
 
   @AfterMethod
