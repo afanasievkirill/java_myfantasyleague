@@ -1,9 +1,14 @@
 package ru.home.pft.myfantasyleague.model;
 
+import java.io.File;
+import java.util.Objects;
+
 public class CustomizeData {
   private String abbriveation;
   private String stadium;
   private String note;
+  private File franchiseIcon;
+  private File franchiseLogo;
 
   public CustomizeData withAbbriveation(String abbriveation) {
     this.abbriveation = abbriveation;
@@ -20,6 +25,16 @@ public class CustomizeData {
     return this;
   }
 
+  public CustomizeData withFranchiseIcon(File franchiseIcon) {
+    this.franchiseIcon = franchiseIcon;
+    return this;
+  }
+
+  public CustomizeData withFranchiseLogo(File franchiseLogo) {
+    this.franchiseLogo = franchiseLogo;
+    return this;
+  }
+
   public String getAbbriveation() {
     return abbriveation;
   }
@@ -30,5 +45,37 @@ public class CustomizeData {
 
   public String getNote() {
     return note;
+  }
+
+  public File getFranchiseIcon(){
+    return franchiseIcon;
+  }
+
+  public File getFranchiseLogo(){
+    return franchiseLogo;
+  }
+
+  @Override
+  public String toString() {
+    return "CustomizeData{" +
+            "abbriveation='" + abbriveation + '\'' +
+            ", stadium='" + stadium + '\'' +
+            ", note='" + note + '\'' +
+            '}';
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    CustomizeData that = (CustomizeData) o;
+    return Objects.equals(abbriveation, that.abbriveation) &&
+            Objects.equals(stadium, that.stadium) &&
+            Objects.equals(note, that.note);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(abbriveation, stadium, note);
   }
 }
