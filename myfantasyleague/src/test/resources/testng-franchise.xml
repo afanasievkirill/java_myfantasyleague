@@ -1,0 +1,10 @@
+<suite name="Suite1" verbose="1" >
+    <test name="Franchise" >
+        <classes>
+            <class name="ru.home.pft.myfantasyleague.tests.BaseInformation" />
+            <class name="ru.home.pft.myfantasyleague.tests.ContactInformation" />
+            <class name="ru.home.pft.myfantasyleague.tests.CustomizeInformation" />
+        </classes>
+    </test>
+
+</suite>

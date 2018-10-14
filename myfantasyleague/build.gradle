@@ -14,3 +14,39 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.5'
     compile 'ch.qos.logback:logback-classic:1.2.3'
 }
+
+task testFranchise(type: Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-franchise.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
+    }
+}
+
+task testWaiver(type: Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-waiver.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
+    }
+}
+
+task testWaiver(type: Test) {
+    useTestNG {
+        suites 'src/test/resources/testng-lineup.xml'
+    }
+    if (project.hasProperty('browser')) {
+        systemProperty 'browser', "${browser}"
+    }
+    if (project.hasProperty('target')) {
+        systemProperty 'target', "${target}"
+    }
+}

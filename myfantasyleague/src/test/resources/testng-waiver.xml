@@ -1,0 +1,11 @@
+<suite name="Suite1" verbose="1" >
+    <test name="Add/Waiver">
+        <classes>
+            <class name="ru.home.pft.myfantasyleague.tests.AddWaiver"/>
+            <class name="ru.home.pft.myfantasyleague.tests.EditWaiver"/>
+            <class name="ru.home.pft.myfantasyleague.tests.DeleteWaiver"/>
+            <class name="ru.home.pft.myfantasyleague.tests.AddPlayer"/>
+            <class name="ru.home.pft.myfantasyleague.tests.DropPlayer"/>
+        </classes>
+    </test>
+</suite>

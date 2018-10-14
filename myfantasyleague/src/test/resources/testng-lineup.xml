@@ -1,0 +1,7 @@
+<suite name="Suite1" verbose="1" >
+    <test name="Lineup" >
+        <classes>
+            <class name="ru.home.pft.myfantasyleague.tests.SubmitLineup" />
+        </classes>
+    </test>
+</suite>
