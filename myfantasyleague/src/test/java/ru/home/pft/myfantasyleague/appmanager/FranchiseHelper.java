@@ -48,6 +48,15 @@ public class FranchiseHelper extends HelperBase {
     submit();
   }
 
+  public ContactData contactFromFranchiseHome(ContactData contact) {
+    click(By.linkText("Franchise Home"));
+    String dayphone = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Daytime Phone:'])[1]/following::td[1]")).getText();
+    String homephone = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Evening Phone:'])[1]/following::td[1]")).getText();
+    String address = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Address:'])[1]/following::td[1]")).getText();
+    String twitter = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Twitter:'])[1]/following::td[1]")).getText();
+    return new ContactData().withDayphone(dayphone).withHomephone(homephone).withAddress(address).withTwitter(twitter);
+  }
+
   public void flagUp(String locator) {
     click(By.id(locator));
   }
@@ -68,4 +77,5 @@ public class FranchiseHelper extends HelperBase {
   public void submit() {
     click(By.xpath("//input[@value='Save Franchise Information']"));
   }
+
 }

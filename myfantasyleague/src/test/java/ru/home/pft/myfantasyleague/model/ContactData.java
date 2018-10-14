@@ -1,5 +1,7 @@
 package ru.home.pft.myfantasyleague.model;
 
+import java.util.Objects;
+
 public class ContactData {
   private String dayphone;
   private String homephone;
@@ -7,6 +9,7 @@ public class ContactData {
   private String city;
   private String zip;
   private String twitter;
+  private String address;
 
   public String getDayphone() {
     return dayphone;
@@ -30,6 +33,10 @@ public class ContactData {
 
   public String getTwitter() {
     return twitter;
+  }
+
+  public String getAddress(){
+    return address;
   }
 
   public ContactData withDayphone(String dayphone) {
@@ -60,5 +67,39 @@ public class ContactData {
   public ContactData withTwitter(String twitter) {
     this.twitter = twitter;
     return this;
+  }
+
+  public ContactData withAddress(String address){
+    this.address = address;
+    return this;
+  }
+
+  @Override
+  public String toString() {
+    return "ContactData{" +
+            "dayphone='" + dayphone + '\'' +
+            ", homephone='" + homephone + '\'' +
+            ", street='" + street + '\'' +
+            ", city='" + city + '\'' +
+            ", zip='" + zip + '\'' +
+            ", twitter='" + twitter + '\'' +
+            ", address='" + address + '\'' +
+            '}';
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    ContactData that = (ContactData) o;
+    return Objects.equals(street, that.street) &&
+            Objects.equals(city, that.city) &&
+            Objects.equals(zip, that.zip) &&
+            Objects.equals(address, that.address);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(street, city, zip, address);
   }
 }
