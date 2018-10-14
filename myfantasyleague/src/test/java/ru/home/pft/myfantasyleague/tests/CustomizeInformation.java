@@ -31,11 +31,11 @@ public class CustomizeInformation extends TestBase {
     return list.iterator();
   }
 
-  @Test
-  public void testCustomizeInformation() throws Exception{
-    CustomizeData customize = new CustomizeData()
-            .withAbbriveation("SMB").withStadium("OneMileHigh").withNote("Позитивный тест")
-            .withFranchiseIcon(new File("src/test/resources/logo.png")).withTimezone("CT");
+  @Test(dataProvider = "validCustomizeInformation")
+  public void testCustomizeInformation(CustomizeData customize) throws Exception{
+//    CustomizeData customize = new CustomizeData()
+//            .withAbbriveation("SMB").withStadium("OneMileHigh").withNote("Позитивный тест")
+//            .withFranchiseIcon(new File("src/test/resources/logo.png")).withTimezone("CT");
     app.franchise().customize(customize);
     CustomizeData customiseFromFranchiseHome = app.franchise().infoFromeFranchiseHomeForm(customize);
     assertThat(customize, equalTo(customiseFromFranchiseHome));

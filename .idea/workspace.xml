@@ -76,7 +76,7 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="gradle" value="166" />
-          <entry key="java" value="8188" />
+          <entry key="java" value="8207" />
           <entry key="properties" value="32" />
           <entry key="txt" value="667" />
           <entry key="xml" value="57" />
@@ -85,7 +85,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="166" />
-          <entry key="JAVA" value="8188" />
+          <entry key="JAVA" value="8207" />
           <entry key="PLAIN_TEXT" value="678" />
           <entry key="Properties" value="32" />
           <entry key="XML" value="57" />
@@ -99,8 +99,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/CustomizeInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+            <state relative-caret-position="408">
+              <caret line="34" column="81" lean-forward="true" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#763#773#0" expanded="true" />
@@ -640,7 +640,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Devel/java_myfantasyleague/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539535749656" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539536545084" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/myfantasyleague/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -668,7 +668,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactInformation.testContactInformation (1)">
+  <component name="RunManager" selected="TestNG.CustomizeInformation.testCustomizeInformation">
     <configuration name="ContactInformation" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="myfantasyleague_test" />
       <extension name="coverage">
@@ -766,10 +766,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.CustomizeInformation.testCustomizeInformation" />
         <item itemvalue="TestNG.ContactInformation.testContactInformation (1)" />
         <item itemvalue="TestNG.CustomizeInformation.testCustomizeInformation (1)" />
         <item itemvalue="TestNG.ContactInformation.testContactInformation" />
-        <item itemvalue="TestNG.CustomizeInformation.testCustomizeInformation" />
         <item itemvalue="TestNG.ContactInformation" />
       </list>
     </recent_temporary>
@@ -788,12 +788,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ContactInformation_testContactInformation - 2018.10.14 at 16h 19m 39s.xml">
-      <configuration name="ContactInformation.testContactInformation" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="CustomizeInformation_testCustomizeInformation_(1) - 2018.10.14 at 16h 30m 21s.xml">
-      <configuration name="CustomizeInformation.testCustomizeInformation (1)" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactInformation_testContactInformation_(1) - 2018.10.14 at 17h 01m 02s.xml">
       <configuration name="ContactInformation.testContactInformation (1)" configurationId="TestNG" />
     </history-entry>
@@ -818,12 +812,18 @@
     <history-entry file="ContactInformation_testContactInformation_(1) - 2018.10.14 at 18h 46m 33s.xml">
       <configuration name="ContactInformation.testContactInformation (1)" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ContactInformation_testContactInformation_(1) - 2018.10.14 at 19h 59m 56s.xml">
+      <configuration name="ContactInformation.testContactInformation (1)" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="CustomizeInformation_testCustomizeInformation - 2018.10.14 at 20h 02m 14s.xml">
+      <configuration name="CustomizeInformation.testCustomizeInformation" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16791044" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -832,7 +832,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1215,8 +1215,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/CustomizeInformation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="31" column="3" lean-forward="true" selection-start-line="31" selection-start-column="3" selection-end-line="31" selection-end-column="3" />
+        <state relative-caret-position="408">
+          <caret line="34" column="81" lean-forward="true" selection-start-line="34" selection-start-column="81" selection-end-line="34" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#763#773#0" expanded="true" />
