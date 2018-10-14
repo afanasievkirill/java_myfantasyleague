@@ -17,7 +17,6 @@ public class BaseInformation extends TestBase {
     app.goTo().home();
     InformationData homeForm = app.franchise().infoFromeHomeForm(information);
     MatcherAssert.assertThat(information.getFranchisename(), CoreMatchers.equalTo(homeForm.getFranchisename()));
-    app.goTo().home();
   }
 
   @Test
@@ -30,6 +29,10 @@ public class BaseInformation extends TestBase {
     app.goTo().home();
     InformationData homeForm = app.franchise().infoFromeHomeForm(information);
     MatcherAssert.assertThat(information.getFranchisename(), CoreMatchers.equalTo(homeForm.getFranchisename()));
+  }
+
+  @AfterMethod
+  public void  endingPreconditions(){
     app.goTo().home();
   }
 

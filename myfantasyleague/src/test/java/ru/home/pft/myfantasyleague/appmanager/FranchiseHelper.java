@@ -24,6 +24,14 @@ public class FranchiseHelper extends HelperBase {
     submit();
   }
 
+  public CustomizeData infoFromeFranchiseHomeForm(CustomizeData customize) {
+    click(By.linkText("Franchise Home"));
+    String stadium = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Stadium:'])[1]/following::td[1]")).getText();
+    String note = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Other Franchise Notes:'])[1]/following::td[1]")).getText();
+
+    return new CustomizeData().withStadium(stadium).withNote(note);
+  }
+
   public void fillTimeZone(String timezone) {
     click(By.name("TIME_ZONE0043"));
     new Select(wd.findElement(By.name("TIME_ZONE0043"))).selectByVisibleText(timezone);
@@ -55,14 +63,6 @@ public class FranchiseHelper extends HelperBase {
     click(By.xpath("//table[@id='roster']/caption/span/a"));
     String ownername = wd.findElement(By.xpath("//table[@id='single_roster']/tbody/tr/td/div/table/caption/span/span")).getText();
     return new InformationData().withFranchisename(franchisename).withOwnername(ownername);
-  }
-
-  public CustomizeData infoFromeFranchiseHomeForm(CustomizeData customize) {
-    click(By.linkText("Franchise Home"));
-    String stadium = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Stadium:'])[1]/following::td[1]")).getText();
-    String note = wd.findElement(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='Other Franchise Notes:'])[1]/following::td[1]")).getText();
-
-    return new CustomizeData().withStadium(stadium).withNote(note);
   }
 
   public void submit() {
