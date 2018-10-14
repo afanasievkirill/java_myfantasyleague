@@ -5,6 +5,9 @@ import org.hamcrest.MatcherAssert;
 import org.testng.annotations.*;
 import ru.home.pft.myfantasyleague.model.InformationData;
 
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class BaseInformation extends TestBase {
 
   @Test
@@ -13,10 +16,9 @@ public class BaseInformation extends TestBase {
     InformationData information = new InformationData().
             withFranchisename("Supir Mario Bros").withOwnername("SupirPuper");
     app.franchise().fillForm(information);
-    app.goTo().submit();
     app.goTo().home();
     InformationData homeForm = app.franchise().infoFromeHomeForm(information);
-    MatcherAssert.assertThat(information.getFranchisename(), CoreMatchers.equalTo(homeForm.getFranchisename()));
+    assertThat(information.getFranchisename(), equalTo(homeForm.getFranchisename()));
   }
 
   @Test
@@ -25,10 +27,9 @@ public class BaseInformation extends TestBase {
     InformationData information = new InformationData().
             withFranchisename("Supir Mario Bros").withOwnername("SupirPuper");
     app.franchise().fillForm(information);
-    app.goTo().submit();
     app.goTo().home();
     InformationData homeForm = app.franchise().infoFromeHomeForm(information);
-    MatcherAssert.assertThat(information.getFranchisename(), CoreMatchers.equalTo(homeForm.getFranchisename()));
+    assertThat(information.getFranchisename(), equalTo(homeForm.getFranchisename()));
   }
 
   @AfterMethod

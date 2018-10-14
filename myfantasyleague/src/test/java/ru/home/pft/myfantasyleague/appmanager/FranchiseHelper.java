@@ -64,6 +64,7 @@ public class FranchiseHelper extends HelperBase {
   public void fillForm(InformationData informationData) {
     type(By.name("FRANCHISE_NAME0043"), informationData.getFranchisename());
     type(By.name("FRANCHISE_OWNER_NAME0043"), informationData.getOwnername());
+    submit();
   }
 
 

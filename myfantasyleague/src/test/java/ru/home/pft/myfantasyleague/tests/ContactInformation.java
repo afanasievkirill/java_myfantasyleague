@@ -7,6 +7,9 @@ import org.hamcrest.MatcherAssert;
 
 import java.util.ArrayList;
 
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 public class ContactInformation extends TestBase {
 
   @BeforeMethod
@@ -20,7 +23,9 @@ public class ContactInformation extends TestBase {
             .withStreet("test").withCity("test1").withZip("test2").withTwitter("supirpuper");
     app.franchise().fillContact(contact, "FRANCHISE_MAIL_EVENT0043AUCTION");
     ContactData contactFromFranchiseHome = app.franchise().contactFromFranchiseHome(contact);
-    MatcherAssert.assertThat(contactFromFranchiseHome.getAddress(), CoreMatchers.equalTo(mergeAddress(contact)));
+    assertThat(contactFromFranchiseHome.getAddress(), equalTo(mergeAddress(contact)));
+    assertThat(contactFromFranchiseHome.getTwitter(), equalTo(mergeTwitter(contact)));
+    assertThat(contact, equalTo(contactFromFranchiseHome));
   }
 
   @Test
@@ -36,8 +41,12 @@ public class ContactInformation extends TestBase {
   }
 
   private String mergeAddress(ContactData contact) {
-    String address = contact.getStreet()+ " " + contact.getCity()+", "+ contact.getZip();
-    //return address;
+    String address = contact.getStreet() + " " + contact.getCity() + ", " + contact.getZip();
     return address;
+  }
+
+  private String mergeTwitter(ContactData contact) {
+    String twitter = "http://twitter.com/"+contact.getTwitter();
+    return twitter;
   }
 }

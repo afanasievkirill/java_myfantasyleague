@@ -75,6 +75,20 @@ public class ContactData {
   }
 
   @Override
+  public boolean equals(Object o) {
+    if (this == o) return true;
+    if (o == null || getClass() != o.getClass()) return false;
+    ContactData that = (ContactData) o;
+    return Objects.equals(dayphone, that.dayphone) &&
+            Objects.equals(homephone, that.homephone);
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(dayphone, homephone);
+  }
+
+  @Override
   public String toString() {
     return "ContactData{" +
             "dayphone='" + dayphone + '\'' +
@@ -87,19 +101,4 @@ public class ContactData {
             '}';
   }
 
-  @Override
-  public boolean equals(Object o) {
-    if (this == o) return true;
-    if (o == null || getClass() != o.getClass()) return false;
-    ContactData that = (ContactData) o;
-    return Objects.equals(street, that.street) &&
-            Objects.equals(city, that.city) &&
-            Objects.equals(zip, that.zip) &&
-            Objects.equals(address, that.address);
-  }
-
-  @Override
-  public int hashCode() {
-    return Objects.hash(street, city, zip, address);
-  }
 }
