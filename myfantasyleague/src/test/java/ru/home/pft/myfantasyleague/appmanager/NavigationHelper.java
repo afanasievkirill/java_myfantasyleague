@@ -41,7 +41,7 @@ public class NavigationHelper extends HelperBase {
   }
 
   public void backWaiver() {
-    wd.findElement(By.linkText("Go Back To Previous Page")).click();
+    click(By.linkText("Go Back To Previous Page"));
   }
 
   public void goToLineup() {

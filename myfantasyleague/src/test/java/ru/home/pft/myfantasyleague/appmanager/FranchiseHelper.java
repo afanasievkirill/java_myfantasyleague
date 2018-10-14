@@ -29,13 +29,14 @@ public class FranchiseHelper extends HelperBase {
     new Select(wd.findElement(By.name("TIME_ZONE0043"))).selectByVisibleText(timezone);
   }
 
-  public void fillContact(ContactData contactData) {
+  public void fillContact(ContactData contactData, String locator) {
     type(By.name("FRANCHISE_DAY_PHONE0043"), contactData.getDayphone());
     type(By.name("FRANCHISE_EVENING_PHONE0043"), contactData.getHomephone());
     type(By.name("FRANCHISE_ADDRESS0043"), contactData.getStreet());
     type(By.name("FRANCHISE_CITY0043"), contactData.getCity());
     type(By.name("FRANCHISE_ZIP0043"), contactData.getZip());
     type(By.name("TWITTER_USERNAME0043"), contactData.getTwitter());
+    click(By.id(locator));
     submit();
   }
 
@@ -51,7 +52,7 @@ public class FranchiseHelper extends HelperBase {
 
   public InformationData infoFromeHomeForm(InformationData information) {
     String franchisename = wd.findElement(By.xpath("//table[@id='roster']/caption/span[2]/a")).getText();
-    wd.findElement(By.xpath("//table[@id='roster']/caption/span/a")).click();
+    click(By.xpath("//table[@id='roster']/caption/span/a"));
     String ownername = wd.findElement(By.xpath("//table[@id='single_roster']/tbody/tr/td/div/table/caption/span/span")).getText();
     return new InformationData().withFranchisename(franchisename).withOwnername(ownername);
   }

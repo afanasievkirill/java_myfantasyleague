@@ -30,7 +30,7 @@ public class WaiverHelper extends HelperBase {
 
   public void fillFreeAgentData(PlayerData playerData) {
     click(By.xpath(playerData.getPlayerID()));
-    wd.findElement(By.id("add_drop_submit")).click(); //метод добавляет в состав игрока в период свободных агентов
+    click(By.id("add_drop_submit")); //метод добавляет в состав игрока в период свободных агентов
   }
 
   public void deletePlayer() {
@@ -42,11 +42,11 @@ public class WaiverHelper extends HelperBase {
   }
 
   public void submit() {
-    wd.findElement(By.id("add_drop_submit")).click();
+    click(By.id("add_drop_submit"));
   }
 
   public void saveWaiverEdit() {
-    wd.findElement(By.name("SAVE")).click();
+    click(By.name("SAVE"));
   }
 
   public void editFillWaiver(PlayerData playerData) {
@@ -64,9 +64,9 @@ public class WaiverHelper extends HelperBase {
   }
 
   public void selectTeam() {
-    wd.findElement(By.id("add_filt_nfl")).click();
+    click(By.id("add_filt_nfl"));
     new Select(wd.findElement(By.xpath("//select[@id='add_filt_nfl']"))).selectByVisibleText("DAL");
-    wd.findElement(By.id("add_filt_nfl")).click();
+    click(By.id("add_filt_nfl"));
   }
 
   public void dpopPlayer(PlayerData playerData) {
