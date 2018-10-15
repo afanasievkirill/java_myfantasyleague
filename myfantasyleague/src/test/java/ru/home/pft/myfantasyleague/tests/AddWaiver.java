@@ -20,7 +20,6 @@ public class AddWaiver extends TestBase {
   public void testAddRequest() throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      //Players before1 = app.waiver().all();
       app.waiver().fillRequest(new PlayerData().
               withPlayerID(testPlayer).withBbid("1").withComment("Позитивный"));
       app.waiver().submit();

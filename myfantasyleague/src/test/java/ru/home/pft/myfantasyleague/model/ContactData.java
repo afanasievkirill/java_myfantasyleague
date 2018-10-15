@@ -8,6 +8,7 @@ public class ContactData {
   private String street;
   private String city;
   private String zip;
+  private String state;
   private String twitter;
   private String address;
 
@@ -25,6 +26,10 @@ public class ContactData {
 
   public String getCity() {
     return city;
+  }
+
+  public String getState() {
+    return state;
   }
 
   public String getZip() {
@@ -56,6 +61,11 @@ public class ContactData {
 
   public ContactData withCity(String city) {
     this.city = city;
+    return this;
+  }
+
+  public ContactData withState(String state) {
+    this.state = state;
     return this;
   }
 
@@ -96,6 +106,7 @@ public class ContactData {
             ", street='" + street + '\'' +
             ", city='" + city + '\'' +
             ", zip='" + zip + '\'' +
+            ", state='" + state + '\'' +
             ", twitter='" + twitter + '\'' +
             ", address='" + address + '\'' +
             '}';

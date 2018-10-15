@@ -2,7 +2,6 @@ package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 import ru.home.pft.myfantasyleague.model.ContactData;
 import ru.home.pft.myfantasyleague.model.CustomizeData;
@@ -42,6 +41,7 @@ public class FranchiseHelper extends HelperBase {
     type(By.name("FRANCHISE_EVENING_PHONE0043"), contactData.getHomephone());
     type(By.name("FRANCHISE_ADDRESS0043"), contactData.getStreet());
     type(By.name("FRANCHISE_CITY0043"), contactData.getCity());
+    select(By.name("FRANCHISE_STATE0043"), contactData.getState());
     type(By.name("FRANCHISE_ZIP0043"), contactData.getZip());
     type(By.name("TWITTER_USERNAME0043"), contactData.getTwitter());
     click(By.id(locator));

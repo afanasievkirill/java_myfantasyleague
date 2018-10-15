@@ -1,6 +1,7 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.text.DateFormat;
@@ -38,6 +39,12 @@ public class HelperBase {
     }
   }
 
+  protected void select(By locator, String text) {
+    wd.findElement(locator).click();
+    new Select(wd.findElement(locator)).selectByVisibleText(text);
+    wd.findElement(locator).click();
+  }
+
   public String closeAlertAndGetItsText() {
     try {
       Alert alert = wd.switchTo().alert();
@@ -52,7 +59,6 @@ public class HelperBase {
       acceptNextAlert = true;
     }
   }
-
 
   public boolean isAlertPresent() {
     try {
