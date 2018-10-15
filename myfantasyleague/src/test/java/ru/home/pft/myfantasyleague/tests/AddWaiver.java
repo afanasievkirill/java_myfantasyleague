@@ -24,7 +24,7 @@ public class AddWaiver extends TestBase {
   public Iterator<Object[]> validGroupsFromJson() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
     BufferedReader reader = new BufferedReader(new FileReader
-            (new File("src/test/resources/AddWaiver-valid.json")));
+            (new File("src/test/resources/testData/AddWaiver-valid.json")));
     String json = "";
     String line = reader.readLine();
     while (line != null) {
@@ -41,7 +41,7 @@ public class AddWaiver extends TestBase {
   public Iterator<Object[]> invalidGroupsFromJson() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
     BufferedReader reader = new BufferedReader(new FileReader
-            (new File("src/test/resources/AddWaiver-invalid.json")));
+            (new File("src/test/resources/testData/AddWaiver-invalid.json")));
     String json = "";
     String line = reader.readLine();
     while (line != null) {

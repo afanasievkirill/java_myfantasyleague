@@ -1,0 +1,17 @@
+[
+  {
+    "playerID": "//tr[@id='add_539']/td",
+    "bbid": "1000",
+    "comment": "Превышение лимита"
+  },
+  {
+    "playerID": "//tr[@id='add_539']/td",
+    "bbid": "-1000",
+    "comment": "Отрицательная ставка"
+  },
+  {
+    "playerID": "//tr[@id='add_539']/td",
+    "bbid": "1.5",
+    "comment": "Дробная ставка"
+  }
+]
