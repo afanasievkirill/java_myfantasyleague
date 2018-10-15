@@ -50,8 +50,14 @@ public class WaiverHelper extends HelperBase {
   }
 
   public void editFillWaiver(PlayerData playerData) {
+    editWaiver();
     type(By.id("amount_0"), playerData.getBbid());
     type(By.id("comment"), playerData.getComment());
+    saveWaiverEdit();
+  }
+
+  public void cansel(){
+    click(By.name("CANCEL"));
   }
 
   public void addRequest(PlayerData requestData) {

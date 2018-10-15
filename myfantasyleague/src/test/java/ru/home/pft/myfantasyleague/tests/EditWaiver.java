@@ -21,9 +21,7 @@ public class EditWaiver extends TestBase {
   public void testEditWaiver() throws Exception {
     if (app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      app.waiver().editWaiver();
       app.waiver().editFillWaiver(new PlayerData().withBbid("2").withComment( "Позитивная проверка"));
-      app.waiver().saveWaiverEdit();
       int after = app.waiver().getPlayerCount();
       Assert.assertEquals(after, before);
     }
@@ -33,10 +31,8 @@ public class EditWaiver extends TestBase {
   public void testEditWaiverMBB() throws Exception {
     if (app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      app.waiver().editWaiver();
       app.waiver().editFillWaiver(new PlayerData().withBbid("1000").withComment( "Превышение лимита"));
-      app.waiver().saveWaiverEdit();
-      app.goTo().back();
+      app.waiver().cansel();
       int after = app.waiver().getPlayerCount();
       Assert.assertEquals(after, before);
     }
