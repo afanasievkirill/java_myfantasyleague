@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 public class AddWaiver extends TestBase {
 
   @DataProvider
-  public Iterator<Object[]> validGroupsFromJson() throws IOException {
+  public Iterator<Object[]> validPlayerJson() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
     BufferedReader reader = new BufferedReader(new FileReader
             (new File("src/test/resources/testData/AddWaiver-valid.json")));
@@ -33,12 +33,12 @@ public class AddWaiver extends TestBase {
     }
     Gson gson = new Gson();
     List<PlayerData> players = gson.fromJson(json, new TypeToken<List<PlayerData>>() {
-    }.getType()); //list<GroupData>.class
+    }.getType());
     return players.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
   }
 
   @DataProvider
-  public Iterator<Object[]> invalidGroupsFromJson() throws IOException {
+  public Iterator<Object[]> invalidPlayerFromJson() throws IOException {
     List<Object[]> list = new ArrayList<Object[]>();
     BufferedReader reader = new BufferedReader(new FileReader
             (new File("src/test/resources/testData/AddWaiver-invalid.json")));
@@ -50,7 +50,7 @@ public class AddWaiver extends TestBase {
     }
     Gson gson = new Gson();
     List<PlayerData> players = gson.fromJson(json, new TypeToken<List<PlayerData>>() {
-    }.getType()); //list<GroupData>.class
+    }.getType());
     return players.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
   }
 
@@ -62,7 +62,7 @@ public class AddWaiver extends TestBase {
     }
   }
 
-  @Test (dataProvider = "validGroupsFromJson")
+  @Test (dataProvider = "validPlayerJson")
   public void testAddRequest(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
@@ -73,7 +73,7 @@ public class AddWaiver extends TestBase {
     }
   }
 
-  @Test (dataProvider = "invalidGroupsFromJson")
+  @Test (dataProvider = "invalidPlayerFromJson")
   public void testAddInvalidRequest(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
@@ -85,7 +85,7 @@ public class AddWaiver extends TestBase {
     }
   }
 
-  @Test (dataProvider = "validGroupsFromJson")
+  @Test (dataProvider = "validPlayerJson")
   public void testAddRequestCansel(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
