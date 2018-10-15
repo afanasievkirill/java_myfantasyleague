@@ -84,6 +84,17 @@ public class LineupHelper extends HelperBase {
     click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getWr3()+"'])[1]/preceding::input[1]"));
     click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getTe()+"'])[1]/preceding::input[1]"));
     click(By.xpath("(.//*[normalize-space(text()) and normalize-space(.)='"+lineup.getSflex()+"'])[1]/preceding::input[1]"));
+  }
 
+  public boolean itsLineupTime() {
+    int dayOfWeek = getDayOfWeek();
+    int hour = getHour();
+    if (dayOfWeek >= 2 && hour >= 9  || dayOfWeek <= 6 && hour <= 20) {
+      System.out.println("Время выставить лайнап");
+      return true;
+    } else {
+      System.out.println("Лайнап должен был быть выставлен");
+      return false;
+    }
   }
 }

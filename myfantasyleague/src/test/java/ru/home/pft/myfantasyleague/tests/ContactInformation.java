@@ -21,14 +21,14 @@ public class ContactInformation extends TestBase {
   }
 
   @DataProvider
-  public Iterator<Object[]> validCustomizeInformation() {
+  public Iterator<Object[]> validContactInformation() {
     List<Object[]> list = new ArrayList<Object[]>();
     list.add(new Object[]{new ContactData().withDayphone("1234567").withHomephone("7654321")
             .withStreet("test").withCity("test1").withState("DC").withZip("test2").withTwitter("supirpuper")});
     return list.iterator();
   }
 
-  @Test(dataProvider = "validCustomizeInformation")
+  @Test(dataProvider = "validContactInformation")
   public void testContactInformation(ContactData contact) throws Exception {
     app.franchise().fillContact(contact, "FRANCHISE_MAIL_EVENT0043AUCTION");
     ContactData contactFromFranchiseHome = app.franchise().contactFromFranchiseHome(contact);
