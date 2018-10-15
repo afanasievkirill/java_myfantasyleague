@@ -1,12 +1,58 @@
 package ru.home.pft.myfantasyleague.tests;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.home.pft.myfantasyleague.model.PlayerData;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class AddWaiver extends TestBase {
+
+  @DataProvider
+  public Iterator<Object[]> validGroupsFromJson() throws IOException {
+    List<Object[]> list = new ArrayList<Object[]>();
+    BufferedReader reader = new BufferedReader(new FileReader
+            (new File("src/test/resources/AddWaiver-valid.json")));
+    String json = "";
+    String line = reader.readLine();
+    while (line != null) {
+      json += line;
+      line = reader.readLine();
+    }
+    Gson gson = new Gson();
+    List<PlayerData> players = gson.fromJson(json, new TypeToken<List<PlayerData>>() {
+    }.getType()); //list<GroupData>.class
+    return players.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+  }
+
+  @DataProvider
+  public Iterator<Object[]> invalidGroupsFromJson() throws IOException {
+    List<Object[]> list = new ArrayList<Object[]>();
+    BufferedReader reader = new BufferedReader(new FileReader
+            (new File("src/test/resources/AddWaiver-invalid.json")));
+    String json = "";
+    String line = reader.readLine();
+    while (line != null) {
+      json += line;
+      line = reader.readLine();
+    }
+    Gson gson = new Gson();
+    List<PlayerData> players = gson.fromJson(json, new TypeToken<List<PlayerData>>() {
+    }.getType()); //list<GroupData>.class
+    return players.stream().map((g) -> new Object[]{g}).collect(Collectors.toList()).iterator();
+  }
 
   @BeforeMethod
   public void  ensurePreconditions(){
@@ -16,24 +62,22 @@ public class AddWaiver extends TestBase {
     }
   }
 
-  @Test
-  public void testAddRequest() throws Exception {
+  @Test (dataProvider = "validGroupsFromJson")
+  public void testAddRequest(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      app.waiver().fillRequest(new PlayerData().
-              withPlayerID(testPlayer).withBbid("1").withComment("Позитивный"));
+      app.waiver().fillRequest(player);
       app.waiver().submit();
       int after = app.waiver().getPlayerCount();
       Assert.assertEquals(after, before);
     }
   }
 
-  @Test
-  public void testAddRequestMBB() throws Exception {
+  @Test (dataProvider = "invalidGroupsFromJson")
+  public void testAddInvalidRequest(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      app.waiver().fillRequest(new PlayerData().
-              withPlayerID(testPlayer).withBbid("1000").withComment("Превышение лимита"));
+      app.waiver().fillRequest(player);
       app.waiver().submit();
       app.goTo().backWaiver();
       int after = app.waiver().getPlayerCount();
@@ -41,38 +85,11 @@ public class AddWaiver extends TestBase {
     }
   }
 
-  @Test
-  public void testAddRequestRevBB() throws Exception {
+  @Test (dataProvider = "validGroupsFromJson")
+  public void testAddRequestCansel(PlayerData player) throws Exception {
     if(app.waiver().itsWaiver()) {
       int before = app.waiver().getPlayerCount();
-      app.waiver().fillRequest(new PlayerData().
-              withPlayerID(testPlayer).withBbid("-1000").withComment("Отрицательная ставка"));
-      app.waiver().submit();
-      app.goTo().backWaiver();
-      int after = app.waiver().getPlayerCount();
-      Assert.assertEquals(after, before);
-    }
-  }
-
-  @Test
-  public void testAddRequestFrBB() throws Exception {
-    if(app.waiver().itsWaiver()) {
-      int before = app.waiver().getPlayerCount();
-      app.waiver().fillRequest(new PlayerData().
-              withPlayerID(testPlayer).withBbid("1.5").withComment("Дробная ставка"));
-      app.waiver().submit();
-      app.goTo().backWaiver();
-      int after = app.waiver().getPlayerCount();
-      Assert.assertEquals(after, before);
-    }
-  }
-
-  @Test
-  public void testAddRequestCansel() throws Exception {
-    if(app.waiver().itsWaiver()) {
-      int before = app.waiver().getPlayerCount();
-      app.waiver().fillRequest(new PlayerData().
-              withPlayerID(testPlayer).withBbid("2").withComment("Отмена запроса на вейвер"));
+      app.waiver().fillRequest(player);
       app.goTo().back();
       app.goTo().waiver();
       int after = app.waiver().getPlayerCount();
