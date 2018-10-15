@@ -44,16 +44,11 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("Go Back To Previous Page"));
   }
 
-  public void goToLineup() {
+  public void lineup() {
     click(By.xpath("//a[contains(text(),'Submit Lineup')]"));
   }
 
-  public void submit() {
-    click(By.xpath("//input[@value='Save Franchise Information']"));
-  }
-
   public void home() {
-    //click(By.linkText("League Home"));
     click(By.cssSelector("span.leaguename--the"));
   }
 
