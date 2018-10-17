@@ -24,7 +24,7 @@ public class LineupHelper extends HelperBase {
     return isElementPresent(By.xpath("//input[@value='Use Custom Submission Form']"));
   }
 
-  public void clean() throws InterruptedException {
+  public void delete () throws InterruptedException {
     if(isThereCustomSubmissionForm()){
       click(By.xpath("//input[@value='Use Custom Submission Form']"));
     }
@@ -34,6 +34,10 @@ public class LineupHelper extends HelperBase {
     assertTrue(closeAlertAndGetItsText()
             .matches("^You are now un-submitting \\(clearing out\\) all lineups displayed on this page\\.\nAre you sure that is what you want to do[\\s\\S]$"));
     Thread.sleep(5000);
+  }
+
+  public void clean() throws InterruptedException {
+    delete();
     click(By.xpath("//input[@value='Use Default Submission Form']"));
     Thread.sleep(1000);
     click(By.xpath("//a[contains(text(),'Go Back To Previous Page')]"));
