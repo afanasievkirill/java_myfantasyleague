@@ -10,7 +10,9 @@ public class SubmitLineup extends TestBase {
   @BeforeMethod
   public void ensurePreconditions() throws InterruptedException {
     app.goTo().lineup();
-    app.lineup().clean();
+    if (app.lineup().itsLineupTime()) {
+      app.lineup().clean();
+    }
   }
 
   @Test

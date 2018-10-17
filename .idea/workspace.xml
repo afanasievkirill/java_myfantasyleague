@@ -59,8 +59,8 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="gradle" value="6" />
-          <entry key="java" value="269" />
-          <entry key="json" value="6" />
+          <entry key="java" value="270" />
+          <entry key="json" value="7" />
           <entry key="properties" value="2" />
           <entry key="txt" value="11" />
           <entry key="xml" value="8" />
@@ -69,8 +69,8 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="6" />
-          <entry key="JAVA" value="269" />
-          <entry key="JSON" value="6" />
+          <entry key="JAVA" value="270" />
+          <entry key="JSON" value="7" />
           <entry key="PLAIN_TEXT" value="11" />
           <entry key="Properties" value="2" />
           <entry key="XML" value="8" />
@@ -80,8 +80,8 @@
         <counts>
           <entry key="dummy" value="11" />
           <entry key="gradle" value="178" />
-          <entry key="java" value="8880" />
-          <entry key="json" value="35" />
+          <entry key="java" value="8891" />
+          <entry key="json" value="72" />
           <entry key="properties" value="32" />
           <entry key="txt" value="758" />
           <entry key="xml" value="66" />
@@ -90,8 +90,8 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="178" />
-          <entry key="JAVA" value="8880" />
-          <entry key="JSON" value="35" />
+          <entry key="JAVA" value="8891" />
+          <entry key="JSON" value="72" />
           <entry key="PLAIN_TEXT" value="769" />
           <entry key="Properties" value="32" />
           <entry key="XML" value="66" />
@@ -105,17 +105,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+            <state relative-caret-position="340">
+              <caret line="22" column="117" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="117" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/myfantasyleague/build.gradle">
+        <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/resources/testData/SubmitLineup-valid.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+            <state relative-caret-position="204">
+              <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -282,6 +282,10 @@
                 <option name="name" value="compileTestJava" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/myfantasyleague" />
+                <option name="name" value="testLineup" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Displays all dependencies declared in root project 'myfantasyleague'." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/myfantasyleague" />
                 <option name="name" value="dependencies" />
@@ -318,9 +322,9 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$/myfantasyleague" value="4613053815277" />
+        <entry key="$PROJECT_DIR$/myfantasyleague" value="4613295448893" />
         <entry key="$PROJECT_DIR$/myfantasyleague/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/myfantasyleague/build.gradle" value="3217937217" />
+        <entry key="$PROJECT_DIR$/myfantasyleague/build.gradle" value="2245685382" />
         <entry key="$PROJECT_DIR$/myfantasyleague/gradle/wrapper/gradle-wrapper.properties" value="2696189834" />
       </map>
     </option>
@@ -509,7 +513,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/BasicInformationData.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/FranchiseInformationHelper.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/FranchiseInformation.java" />
@@ -558,8 +561,9 @@
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/resources/logback.xml" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/LineupHelper.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/appmanager/NavigationHelper.java" />
-        <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java" />
         <option value="$PROJECT_DIR$/myfantasyleague/build.gradle" />
+        <option value="$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java" />
+        <option value="$PROJECT_DIR$/myfantasyleague/src/test/resources/testData/SubmitLineup-valid.json" />
       </list>
     </option>
   </component>
@@ -672,7 +676,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Devel/java_myfantasyleague/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/EditWaiver.java" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539769790504" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539769870207" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/myfantasyleague/build.gradle" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -956,13 +960,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/LineupData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="863">
-          <caret line="94" column="24" selection-start-line="94" selection-start-column="24" selection-end-line="94" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/InformationData.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="612">
@@ -1057,6 +1054,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="74" column="16" selection-start-line="74" selection-start-column="16" selection-end-line="74" selection-end-column="16" />
+          <folding>
+            <element signature="e#1482#1483#0" expanded="true" />
+            <element signature="e#1558#1559#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1192,6 +1193,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
           <caret line="62" column="61" lean-forward="true" selection-start-line="62" selection-start-column="61" selection-end-line="62" selection-end-column="61" />
+          <folding>
+            <element signature="method#isThereDefoltSubmissionForm#0;class#LineupHelper#0" />
+            <element signature="e#1535#1536#0" expanded="true" />
+            <element signature="e#1609#1610#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1216,17 +1222,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java">
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/model/LineupData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="3" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+        <state relative-caret-position="85">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/myfantasyleague/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="49" column="38" lean-forward="true" selection-start-line="49" selection-start-column="38" selection-end-line="49" selection-end-column="38" />
+        <state relative-caret-position="697">
+          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/java/ru/home/pft/myfantasyleague/tests/SubmitLineup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="22" column="117" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myfantasyleague/src/test/resources/testData/SubmitLineup-valid.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
         </state>
       </provider>
     </entry>
