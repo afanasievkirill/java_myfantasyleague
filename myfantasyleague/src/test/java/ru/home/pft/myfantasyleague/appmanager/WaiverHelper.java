@@ -4,15 +4,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-import ru.home.pft.myfantasyleague.model.ContactData;
 import ru.home.pft.myfantasyleague.model.PlayerData;
 import ru.home.pft.myfantasyleague.model.Players;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 public class WaiverHelper extends HelperBase {
@@ -25,12 +19,11 @@ public class WaiverHelper extends HelperBase {
     click(By.xpath(playerData.getPlayerID()));
     type(By.name("BBID_AMT"), playerData.getBbid());
     type(By.name("COMMENTS"), playerData.getComment());
-
   }
 
-  public void fillFreeAgentData(PlayerData playerData) {
+  public void add(PlayerData playerData){
     click(By.xpath(playerData.getPlayerID()));
-    click(By.id("add_drop_submit")); //метод добавляет в состав игрока в период свободных агентов
+    submit();
   }
 
   public void deletePlayer() {

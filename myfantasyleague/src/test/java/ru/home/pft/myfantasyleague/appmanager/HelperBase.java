@@ -1,6 +1,7 @@
 package ru.home.pft.myfantasyleague.appmanager;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.support.pagefactory.ByAll;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
