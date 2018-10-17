@@ -39,7 +39,7 @@ task testWaiver(type: Test) {
     }
 }
 
-task testWaiver(type: Test) {
+task testLineup(type: Test) {
     useTestNG {
         suites 'src/test/resources/testng-lineup.xml'
     }
