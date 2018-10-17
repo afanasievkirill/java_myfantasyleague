@@ -21,6 +21,7 @@ public class ApplicationManager {
   private FranchiseHelper franchiseHelper;
   private WaiverHelper waiverHelper;
   private LineupHelper lineupHelper;
+  private BaitHelper baitHelper;
   private String browser;
 
   public ApplicationManager(String browser) {
@@ -46,6 +47,7 @@ public class ApplicationManager {
     franchiseHelper = new FranchiseHelper(wd);
     waiverHelper = new WaiverHelper(wd);
     lineupHelper = new LineupHelper(wd);
+    baitHelper = new BaitHelper(wd);
     sessionHelper.login(properties.getProperty("web.adminLogin"),properties.getProperty("web.adminPassword"));
   }
 
@@ -67,5 +69,9 @@ public class ApplicationManager {
 
   public LineupHelper lineup() {
     return lineupHelper;
+  }
+
+  public BaitHelper bait(){
+    return baitHelper;
   }
 }

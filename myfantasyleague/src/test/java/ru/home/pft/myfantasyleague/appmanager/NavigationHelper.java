@@ -56,5 +56,8 @@ public class NavigationHelper extends HelperBase {
     wd.navigate().back();
   }
 
+  public void bait(){
+    click(By.cssSelector("svg.icon-user-secret"));
+  }
 
 }
